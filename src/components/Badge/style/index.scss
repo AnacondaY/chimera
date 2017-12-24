@@ -1,0 +1,51 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import './mixin.scss';
+
+$badge: #{$class-prefix}-badge;
+
+.#{$badge}{
+    display: inline-block;
+    position: relative;
+    &-symbol{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 18px;
+        line-height: 18px;
+        padding: 0 4px;
+        text-align: center;
+        min-width: 18px;
+        border-radius: 10px;
+        color: $default;
+        transform: translate(50%, -50%);
+        font-size: 12px;
+        white-space: nowrap;
+        box-sizing: border-box;
+        &-dot{
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+            min-width: 10px;
+            padding: 0;
+        }
+    }
+    &-primary{
+        @include symbol-generator($primary, $badge);
+    }
+    &-success{
+        @include symbol-generator($success, $badge);
+    }
+    &-info{
+        @include symbol-generator($info, $badge);
+    }
+    &-error{
+        @include symbol-generator($error, $badge);
+    }
+    &-default{
+        @include symbol-generator($inverse, $badge);
+    }
+    &-warning{
+        @include symbol-generator($warning, $badge);
+    }
+}

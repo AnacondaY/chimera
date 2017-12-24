@@ -1,0 +1,106 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import '../../style/main/holder.scss';
+$dialog: #{$class-prefix}-dialog;
+.#{$dialog} {
+    position: relative;
+    font-size: 14px;
+    color: $text-primary;
+    &-mask {
+        z-index: 999;
+        background-color: rgba($inverse, .42);
+        @extend %full-screen;
+    }
+    &-wrapper{
+        z-index: 1000;
+        @extend %full-screen;
+        background-color: transparent;
+    }
+    &-main {
+        position: relative;
+        margin: 10% auto 0;
+    }
+    &-header {
+        background: rgba($inverse, .82);     
+        color: $default;           
+        padding: 16px 12px;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: 6px 6px 0 0;
+        //border-bottom: 1px solid $boundary;
+        margin-bottom: 1px;
+        @extend %clearfix;
+    }
+    &-body {
+        background: rgba($inverse, .82);                
+        padding: 8px;
+        border-radius: 6px;
+        @extend %clearfix;
+    }
+    &-footer {
+        background: rgba($inverse, .82);                
+        padding: 8px 12px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        @extend %clearfix;
+    }
+    &-close{
+        cursor: pointer;
+        float: right;
+        transition: transform .5s ease-out;
+        &:hover{
+            transform: rotate(360deg);
+        }
+    }
+    &-has-footer{
+        .#{$dialog}-body{
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    &-has-header{
+        .#{$dialog}-body{
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+    &-confirm{
+        @extend %clearfix;
+    }
+    &-icon{
+        font-size: 20px;
+        margin-right: 8px;
+        display: inline-block;
+        &-error{
+            color: $error;
+        }
+        &-info{
+            color: $info;
+        }
+        &-warning{
+            color: $warning;
+        }
+        &-success{
+            color: $success;
+        }
+    }
+    &-description{
+        padding: 8px 16px;
+        &-title{
+            padding-bottom: 6px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &-content{
+            margin: 12px 0 0 24px;
+        }
+    }
+    &-buttons{
+        margin-left: 60%;
+        button{
+            margin-left: 12px;
+        }
+    }
+}

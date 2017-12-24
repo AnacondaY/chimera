@@ -1,0 +1,12 @@
+.demo-pagination-list{
+    .cmr-pagination{
+        &:not(:last-of-type){
+            margin-bottom: 12px;
+        }
+    }
+}
+.demo-pagination{
+    &-total{
+        color: #1b98f3;
+    }
+}

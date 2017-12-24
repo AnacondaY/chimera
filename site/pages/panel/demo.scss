@@ -1,0 +1,10 @@
+.demo-panel{
+    width: 360px;
+    &-image{
+        width: 280px;
+        strong{
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+}

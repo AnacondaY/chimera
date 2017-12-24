@@ -1,0 +1,32 @@
+@import '../../style/main/base.scss';
+$layout: #{$class-prefix}-layout;
+
+.#{$layout}{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    position: relative;
+    &-has-sider{
+        flex-direction: row;
+    }
+    &-content{
+        position: relative;
+        flex:auto;
+    }
+    &-sider{
+        overflow-x: hidden;
+        transition: width .25s;
+        position: relative;
+        &-right{
+            order: 1;
+        }
+    }
+    &-header{
+        flex: auto;
+        position: relative;
+    }
+    &-footer{
+        flex: auto;
+        position: relative;
+    }
+}

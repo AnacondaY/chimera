@@ -1,0 +1,8 @@
+@mixin step-generator($stepName, $theme){
+    .#{$stepName}-icon{
+        &-circle{
+            background: $theme;
+        }
+    }
+    color: $theme;
+}

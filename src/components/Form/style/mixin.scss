@@ -1,0 +1,68 @@
+@import '../../style/main/base.scss';
+
+$input: #{$class-prefix}-input;
+$select: #{$class-prefix}-select;
+$feedback: #{$class-prefix}-form-feedback;
+
+@mixin field-generator($border-color, $color){
+
+    %theme{
+        border-color: $border-color;
+        &:hover,
+        &:focused,
+        &-hovered,
+        &-focused{
+            border-color: $border-color;
+            box-shadow: 0 0 6px rgba($border-color, .35);
+        }
+    }
+
+    .#{$input}{
+        &-textarea,
+        &-origin{
+            @extend %theme;
+        }
+    }
+
+    .#{$select}{
+        &-box{
+            @extend %theme;
+        }
+        &-open{
+            &-box{
+                @extend %theme;
+            }
+        }
+    }
+
+    .#{$feedback}{
+        color: $color;
+    }
+}
+
+@mixin form-validate($text-color, $border-color, $bg){
+    .#{$input}{
+        &,
+        &:hover{
+            border-color: $border-color;
+        }
+        &:focus{
+
+        }
+    }
+    &-feedback{
+        color: $text-color;
+    }
+}
+
+@mixin form-normalizr(){
+    legend{
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        margin: 20px 0 30px 0;
+    }
+    label{
+        font-size: 14px;
+    }
+}

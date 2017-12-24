@@ -1,0 +1,120 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import '../../style/main/holder.scss';
+
+$slider: #{$class-prefix}-slider;
+$trace: #{$slider}-trace;
+$chunk: #{$slider}-chunk;
+$tick: #{$slider}-tick;
+$trigger: #{$slider}-trigger;
+$inner: #{$slider}-inner;
+
+.#{$slider}{
+    cursor: pointer;
+    @extend %clearfix;
+    &:not(&-disabled):hover{
+        .#{$trigger}{
+            border-color: lighten($highlight, 3);
+        }
+        .#{$trace}{
+            background: lighten($highlight, 3);
+        }
+    }
+    &-inner{
+        position: relative;
+        background: $control-background;
+        border-radius:6px;
+        margin: 12px 0;
+    }
+    &-disabled{
+        cursor: not-allowed;
+        .#{$trace}{
+            background: $disabled;
+        }
+        .#{$trigger}{
+            border-color: $disabled;
+        }
+    }
+    &-exclude {
+        .#{$trace}{
+            background: transparent;
+        }
+        &:hover{
+            .#{$trace}{
+                background: transparent !important;
+            }
+        }
+    }
+    &-vertical{
+        .#{$inner}{
+            width: 8px;
+            height: 100%;
+        }
+        .#{$trace}{
+            width: 100%;
+            bottom: 0;
+        }
+        .#{$chunk}{
+            left: 50%;
+            bottom: 0;   
+            transform: translate(-50%, 50%);         
+        }
+        .#{$tick}{
+            left: 0;
+            transform: translate(0, 4px);
+        }
+    }
+    &-horizontal{
+        .#{$inner}{
+            height: 8px;
+            width: 100%;
+        }
+        .#{$trace}{
+            height: 100%;
+            left: 0;
+        }
+        .#{$chunk}{
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .#{$tick}{
+            top: 0;
+            transform: translate(-4px, 0);
+        }
+    }
+    &-trace{
+        position: absolute;
+        background: $highlight;
+        border-radius: 6px;
+        transition: background .25s;
+        z-index: 1;
+    }
+    &-chunk{
+        position: absolute;
+    }
+    &-trigger{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 2px solid $highlight;
+        background: $default;
+        transition: .25s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    &-ticks{
+        height: 100%;
+        width: 100%;
+    }
+    &-tick{
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: rgba($inverse, .5);
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,9 @@
+.demo-input{
+    &:not(:last-of-type){
+        margin-bottom: 12px;
+    }
+}
+
+.demo-input-normal{
+    width: 240px;
+}

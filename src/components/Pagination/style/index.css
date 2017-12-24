@@ -1,0 +1,75 @@
+.cmr-pagination-list:before, .cmr-pagination-list:after {
+  content: '';
+  display: table; }
+
+.cmr-pagination-list:after {
+  clear: both; }
+
+.cmr-pagination {
+  position: relative;
+  color: #fff;
+  font-size: 14px; }
+  .cmr-pagination-list {
+    display: inline-block;
+    vertical-align: middle; }
+  .cmr-pagination-mini .cmr-pagination-pager {
+    width: auto;
+    padding: 0 4px;
+    background: transparent;
+    border-radius: 0;
+    border: 0; }
+    .cmr-pagination-mini .cmr-pagination-pager-active {
+      background: transparent;
+      color: #04d8b5; }
+      .cmr-pagination-mini .cmr-pagination-pager-active:hover {
+        color: #04d8b5; }
+    .cmr-pagination-mini .cmr-pagination-pager-disabled {
+      background: transparent;
+      color: #9b9a9a; }
+      .cmr-pagination-mini .cmr-pagination-pager-disabled:hover {
+        color: #9b9a9a; }
+    .cmr-pagination-mini .cmr-pagination-pager:first-of-type {
+      border: 0; }
+  .cmr-pagination-pager {
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: 26px;
+    min-width: 28px;
+    padding: 0 4px;
+    text-align: center;
+    float: left;
+    transition: .25s;
+    background: rgba(0, 0, 0, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35); }
+    .cmr-pagination-pager:hover {
+      color: #04d8b5; }
+    .cmr-pagination-pager:first-of-type {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-left: 1px solid rgba(255, 255, 255, 0.35); }
+    .cmr-pagination-pager:last-of-type {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+    .cmr-pagination-pager-active {
+      background: #04d8b5; }
+      .cmr-pagination-pager-active:hover {
+        color: #fff; }
+    .cmr-pagination-pager-disabled {
+      cursor: not-allowed;
+      background: #9b9a9a; }
+      .cmr-pagination-pager-disabled:hover {
+        color: #fff; }
+  .cmr-pagination-regulator {
+    width: 96px; }
+  .cmr-pagination-jumper .cmr-input {
+    width: 38px;
+    margin: 0 4px; }
+  .cmr-pagination-total {
+    vertical-align: top;
+    line-height: 28px; }
+  .cmr-pagination-item {
+    display: inline-block;
+    margin-right: 8px;
+    line-height: 28px; }

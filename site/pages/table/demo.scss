@@ -1,0 +1,23 @@
+.demo-table{
+    &-control{
+        text-align: center;
+        .cmr-button{
+            margin-right: 8px;
+        }
+    }
+}
+.demo-pagination{
+    &:before,
+    &:after{
+        content:'';
+        display: table;
+        font:0/0 a;
+    }
+    &:after{
+        clear:both;
+    }
+    margin: 12px;
+    .cmr-pagination{
+        float: right;
+    }
+}

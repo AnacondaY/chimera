@@ -1,0 +1,22 @@
+$highlight: #04d8b5 !default;
+$primary: #1b98f3 !default;
+$error: #f05a5a !default;
+$info: #22ccc2 !default;
+$warning: #fac525 !default;
+$success: #20b96d !default;
+$disabled: #9b9a9a !default;
+$boundary: #a6a6a6 !default;
+$text-primary: #d0d0d0 !default;
+$text-secondary: #d5d5d5 !default;
+$control-background: rgba($inverse, .25) !default;
+$popover-background-primary: rgba($inverse, .78) !default;
+$popover-background-secondary: rgba($inverse, .85) !default;
+$popover-shadow: rgba($inverse, .25) !default;
+
+//form
+$form-font: $title;
+$form-field-error: $error;
+$form-field-warn: $warning;
+$form-field-success: $success;
+
+

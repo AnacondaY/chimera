@@ -1,0 +1,136 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import '../../style/main/holder.scss';
+$cp: #{$class-prefix}-colorpicker;
+
+.#{$cp}{
+    position: relative;
+    display: inline-block;
+    &-panel{
+        position: absolute;        
+        background-color: $popover-background-primary;
+        box-shadow: 2px 2px 12px $popover-shadow; 
+        padding: 8px 24px 12px 8px; 
+        border-radius: 6px;          
+    }
+    &-pickzone{
+        position: relative;
+        width: 280px;
+        height: 240px;
+        margin-bottom: 8px;
+        margin-right: 12px;
+        &-cloak{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }   
+        &-white{
+            background-image: linear-gradient(to right,#fff,rgba($default,0));
+        }
+        &-black{
+            background-image: linear-gradient(to top , #000 ,rgba($inverse, 0));
+        }
+    }
+    &-cursor{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 8px;
+        height: 8px;
+        border: 1px solid $inverse;
+        box-sizing: border-box;
+        border-radius: 50%;
+    }
+    &-dropdown{
+        background-color: $control-background;
+        padding: 6px;
+        &-patch{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &-slider{
+        position: relative;
+        &-horizontal{
+            width: 280px;
+            height: 18px;
+            .#{$cp}-slider-thumb{                         
+                height: 24px;
+                width: 6px;
+            }
+        }
+        &-vertical{
+            width: 18px;
+            height: 240px;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            .#{$cp}-slider-thumb{
+                width: 24px;
+                height: 6px;
+            }
+        }
+        &-hue.#{$cp}-slider-horizontal{
+            .#{$cp}-slider-inner{
+                background-image: linear-gradient(to right,red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red 100%);
+            }
+        }
+        &-hue.#{$cp}-slider-vertical{
+            .#{$cp}-slider-inner{
+                background-image: linear-gradient(to bottom,red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red 100%);
+            }
+        }
+        &-inner{
+            width: 100%;
+            height: 100%;
+        }
+        &-thumb{
+            position: absolute;
+            top: -3px;     
+            left: -3px;  
+            background-color: rgba($default, .75);
+            box-shadow: 2px 2px 8px rgba($inverse, .25);   
+            border-radius: 18px;         
+        }
+    }
+    &-control{
+        color: $default;
+        font-size: 14px;
+        margin-top: 8px;
+        display: table;
+        text-align: center;
+        width: 280px;
+        &-item{
+            display: table-cell;
+            &-label{
+                margin-top: 4px;
+            }
+            .#{$class-prefix}-input{
+                width: 84%;
+                &-origin{
+                    padding: 0;
+                    text-align: center;            
+                }
+            }
+        }
+    }
+}
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

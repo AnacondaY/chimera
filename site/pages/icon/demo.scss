@@ -1,0 +1,24 @@
+.demo-icon{
+    text-align: center;
+    color: #fff;    
+    padding: 0 12px;
+    background: rgba(#000, .15);
+    .cmr-icon{
+        font-size: 36px;
+    }
+    &-wrapper{
+        padding: 12px 0;
+    }
+    &-text{
+        padding: 8px 0;
+    }
+    &-container{
+        margin: 4px auto;
+        padding: 8px 0;
+        width: 99%;
+        background: rgba(#000, .25);        
+    }
+    &-list{
+        padding: 4px 0;
+    }
+}

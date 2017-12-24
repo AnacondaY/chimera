@@ -1,0 +1,85 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import '../../style/main/holder.scss';
+
+$ckb: #{$class-prefix}-checkbox;
+
+.#{$ckb}{
+    display: inline-block;
+    vertical-align: middle;
+    cursor:pointer;
+    &-input{
+        position: relative;
+    }
+    &-mock{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        background-color: $control-background;
+        transition: background .25s;
+        overflow: hidden;
+        box-sizing: border-box;
+        border: 1px solid $boundary;
+        &:after{
+            content:'';
+            position: absolute;
+        }
+    }
+    &-origin{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+    }
+    &-text{
+        font-size: 14px;
+        color:$text-primary;
+        vertical-align: middle;
+        margin-left: 4px;
+    }
+    &-checked{
+        .#{$ckb}-mock{
+            background: $highlight;
+            &:after{
+                left: 4px;
+                width: 5px;
+                height: 10px;
+                transform: rotate(45deg);
+                transform-origin: center center;
+                border: {
+                    right: 2px solid $default;
+                    bottom: 2px solid $default;
+                }
+            }
+        }
+    }
+    &-indeterminate{
+        .#{$ckb}-mock{
+            background: $highlight;
+            &:after{
+                height: 2px;
+                width: 12px;
+                background: $default;
+                @extend %absolute-middle;
+            }
+        }
+    }
+    &-disabled{
+        cursor: not-allowed;
+        .#{$ckb}-mock{
+            background: $disabled;
+        }
+    }
+    &:not(:last-of-type){
+        margin-right: 6px;
+    }
+}

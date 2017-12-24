@@ -1,0 +1,182 @@
+body{
+    //background: radial-gradient(at left top, #1567b6 10%, #526d9d 40%, #5393aa 83%, #b0ae81 100%);
+    background: radial-gradient(at left top, #b0ae81 10%, #5393aa 40%, #526d9d 83%, #1567b6 100%);
+}
+%clearfix{
+    &::before{
+        content:'';
+        display: table;
+    }
+    &::after{
+        content:'';
+        display: table;
+        clear: both;
+    }
+}
+$width: 1200px;
+$default: #fff;
+$inverse: #000;
+$active: #04d8b5;
+$title: #d0d0d0;
+
+.app{
+    font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+    &-header{
+        color: $default;
+        background: rgba($inverse, .48);
+        &-inner{
+            margin: 0 auto;
+            width: 90%;
+            @extend %clearfix;        
+        }
+        &-logo{
+            float: left;
+            padding: 0;
+            margin: 0;
+        }
+        &-search{
+            float: left;
+            width: 280px;
+            line-height: 64px;
+            margin-top: 14px;
+            padding-left: 12px;
+            border-left: 2px solid $title;
+            .cmr-select{
+                &-box{
+                    background: transparent;
+                    border-color: transparent;
+                    &:hover,
+                    &:focus{
+                        border-color: transparent;
+                        box-shadow: none;
+                    }
+                }
+                &-arrow{
+                    display: none;
+                }
+                &-opened{
+                    .cmr-select-box{
+                        border-color: transparent;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        &-nav{
+            float: right;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            @extend %clearfix;
+            &-item{
+                cursor: pointer;
+                float: left;
+                height: 64px;
+                line-height: 64px;
+                box-sizing: border-box;
+                transition: .25s;
+                border-bottom: 2px solid transparent;
+                & > a{
+                    padding: 0 24px;
+                    display: block;
+                    height: 100%;
+                    color: #fff;
+                }
+                &:hover:not(.language){
+                    color: $active;
+                    border-color: $active;
+                }
+                &.active:not(.language){
+                    color: $active;
+                    border-bottom: 2px solid $active;
+                }
+                &.language{
+                    cursor: default;
+                    .active{
+                        color: $active;
+                        font-weight: 600;
+                    }
+                }
+                .language{
+                    &-item{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    &-body{
+        width: 90%;
+        margin: 1% auto 0;
+        padding-bottom: 16px;
+        background: rgba($inverse, .2);
+        &-inner{
+            margin: 0 auto;
+            @extend %clearfix;
+        }
+    }
+    &-aside{
+        color: $default;
+        font-size: 14px;
+        padding: 12px 0;
+        background: rgba($inverse, .16);
+        &-nav{
+            font-weight: 500;
+            a{
+                display: block;
+                height: 100%;
+                color: $default;
+            }
+            &-item{
+                padding: 0 12px;
+                line-height:42px;
+                height: 42px;
+                border-left: 2px solid transparent;
+                &:hover,
+                &-active{
+                    background: rgba($inverse, .16);
+                    border-left-color: $active;
+                    a{
+                        color: $active;
+                    }
+                }
+                &-group{
+                    &-title{
+                        font-size: 12px;
+                        color: $title;
+                        padding: 12px 24px;
+                    }
+                    .app-aside-nav{
+                        &-item{
+                            padding-left: 24px;
+                        }
+                    }
+                }
+            }
+            &-subnav{
+                padding: 8px 0;     
+                &-title{
+                    padding-left: 12px;
+                }    
+            }
+        }
+    }
+    &-content{
+        padding: 0 2%;
+    }
+}
+
+.cmr-demo{
+    &-overview{
+        color: #fff;
+        font-size: 14px;
+        pre{
+            padding: 16px 0;
+            background: rgba(#000, .15);
+            line-height: 1.75;
+        }
+        code{
+            font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;;            
+        }
+    }
+}

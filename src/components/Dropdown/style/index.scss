@@ -1,0 +1,41 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+
+$dropdown: #{$class-prefix}-dropdown;
+
+.#{$dropdown}{
+    display: inline-block;
+    position: relative;
+    &-menu{
+        position: absolute;
+        border-radius: 4px;
+        background: $popover-background-primary;
+        color:$default;
+        font-size: 14px;
+        box-shadow: 2px 2px 8px rgba($inverse, .25);
+        overflow: hidden;
+        &-item{
+            cursor: pointer;
+            padding: 6px 12px;
+            transition: .25s;
+            &:hover{
+                color: $highlight;
+                background: $popover-background-secondary;
+            }
+            a{
+                color: inherit;
+            }
+        }
+        &-divider{
+            height: 1px;
+            background: $boundary;
+            margin: 2px 0;
+        }
+        &-top{
+            transform: translate(0, -100%);
+        }
+    }
+    &-button{
+        padding: 0;
+    }
+}

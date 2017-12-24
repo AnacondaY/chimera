@@ -1,0 +1,88 @@
+@import '../../style/theme/default.scss';
+@import '../../style/main/base.scss';
+@import './mixin.scss';
+
+$btn: #{$class-prefix}-button;
+$icon: #{$class-prefix}-icon;
+
+.#{$btn}{
+    transition: .25s;
+    text-align: center;
+    border: 1px solid;
+    box-sizing: border-box;
+    background: none;
+    cursor: pointer;
+    vertical-align: middle;
+    &:focus{
+        outline: none;
+    }
+    &-primary{
+        @include button-generator($primary, $default);
+    }
+    &-success{
+        @include button-generator($success, $default);
+    }
+    &-info{
+        @include button-generator($info, $default);
+    }
+    &-warning{
+        @include button-generator($warning, $default)
+    }
+    &-error{
+        @include button-generator($error, $default);
+    }
+    &-default{
+        @include button-generator(transparent, $default, rgba($inverse, .35), rgba($inverse, .35));
+        &.#{$btn}-loading{
+            background: transparent;
+            border-color: $boundary;
+        }
+        border-color: $boundary;
+    }
+    &-disabled{
+        cursor: not-allowed;
+        @include button-generator(rgba($default, .6), $disabled, rgba($default, .6), rgba($default, .6));
+        border-color: $disabled;
+    }
+    &-large{
+        @include size-generator(14px, 8px, 36px, 0 16px);
+    }
+    &-small{
+        @include size-generator(12px, 4px, 28px, 0 12px);
+    }
+    &-middle{
+        @include size-generator(14px, 6px, 32px, 0 14px);
+    }
+    &-link{
+        border: none;
+        background: transparent;
+        padding: 0;
+        height: auto;      
+        @include link-generator($btn, 'default', $title);
+        @include link-generator($btn, 'primary', $primary);
+        @include link-generator($btn, 'success', $success);    
+        @include link-generator($btn, 'error', $error);
+        @include link-generator($btn, 'warning', $warning);
+        @include link-generator($btn, 'info', $info);  
+        @include link-generator($btn, 'disabled', $disabled, $disabled);
+    }
+    &-group{
+        display: inline-block;
+        .#{$btn}{
+            &-first{
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            &-last{
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            &-continuous{
+                border-radius: 0;
+            }
+        }
+    }
+    .#{$icon}{
+        margin-right: 2px;
+    }
+}

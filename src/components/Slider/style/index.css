@@ -1,0 +1,82 @@
+.cmr-slider:before, .cmr-slider:after {
+  content: '';
+  display: table; }
+
+.cmr-slider:after {
+  clear: both; }
+
+.cmr-slider {
+  cursor: pointer; }
+  .cmr-slider:not(.cmr-slider-disabled):hover .cmr-slider-trigger {
+    border-color: #04e7c2; }
+  .cmr-slider:not(.cmr-slider-disabled):hover .cmr-slider-trace {
+    background: #04e7c2; }
+  .cmr-slider-inner {
+    position: relative;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    margin: 12px 0; }
+  .cmr-slider-disabled {
+    cursor: not-allowed; }
+    .cmr-slider-disabled .cmr-slider-trace {
+      background: #9b9a9a; }
+    .cmr-slider-disabled .cmr-slider-trigger {
+      border-color: #9b9a9a; }
+  .cmr-slider-exclude .cmr-slider-trace {
+    background: transparent; }
+  .cmr-slider-exclude:hover .cmr-slider-trace {
+    background: transparent !important; }
+  .cmr-slider-vertical .cmr-slider-inner {
+    width: 8px;
+    height: 100%; }
+  .cmr-slider-vertical .cmr-slider-trace {
+    width: 100%;
+    bottom: 0; }
+  .cmr-slider-vertical .cmr-slider-chunk {
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%); }
+  .cmr-slider-vertical .cmr-slider-tick {
+    left: 0;
+    transform: translate(0, 4px); }
+  .cmr-slider-horizontal .cmr-slider-inner {
+    height: 8px;
+    width: 100%; }
+  .cmr-slider-horizontal .cmr-slider-trace {
+    height: 100%;
+    left: 0; }
+  .cmr-slider-horizontal .cmr-slider-chunk {
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .cmr-slider-horizontal .cmr-slider-tick {
+    top: 0;
+    transform: translate(-4px, 0); }
+  .cmr-slider-trace {
+    position: absolute;
+    background: #04d8b5;
+    border-radius: 6px;
+    transition: background .25s;
+    z-index: 1; }
+  .cmr-slider-chunk {
+    position: absolute; }
+  .cmr-slider-trigger {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid #04d8b5;
+    background: #fff;
+    transition: .25s; }
+    .cmr-slider-trigger:hover {
+      transform: scale(1.2); }
+  .cmr-slider-ticks {
+    height: 100%;
+    width: 100%; }
+  .cmr-slider-tick {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%; }

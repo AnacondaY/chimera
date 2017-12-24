@@ -1,0 +1,40 @@
+@import '../../style/theme/default.scss';
+@import '../../style/main/base.scss';
+
+$msg: #{$class-prefix}-message;
+
+@mixin msg-generator($type, $color){
+    &-#{$type}{
+        .#{$msg}-icon{
+            color: $color;
+        }
+    }
+}
+
+.#{$msg}{
+    background: rgba($inverse, .78);
+    box-shadow: 2px 2px 8px rgba($inverse, .55);
+    position: fixed;
+    min-width: 240px;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 0;
+    transition: top .35s;
+    &-icon{
+        font-size: 18px;
+        display: inline-block;
+        width: 36px;
+        text-align: center;
+    }
+    &-content{
+        font-size: 14px;
+        padding: 8px;
+        color: $default;
+        display: inline-block;
+    }
+
+    @include msg-generator('success', $success);
+    @include msg-generator('error', $error);
+    @include msg-generator('info', $info);
+    @include msg-generator('warning', $warning);
+}

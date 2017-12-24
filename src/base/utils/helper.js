@@ -1,0 +1,1 @@
+export const isObject = (maybeObj) => Object.prototype.toString.call(maybeObj) === '[Object object]';

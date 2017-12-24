@@ -1,0 +1,31 @@
+body, input, textarea{
+    margin: 0;
+    font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+ul, ol{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+@for $i from 1 through 6 {
+    h#{$i}{
+        padding: 0;
+        margin: 0;
+    }
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #04d8b5;
+    &:active{
+        color: darken(#04d8b5, 6);
+    }
+}
+button,
+input,
+textarea{
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}

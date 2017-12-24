@@ -1,0 +1,51 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import '../../style/main/holder.scss';
+
+$panel: #{$class-prefix}-panel;
+$header: #{$panel}-header;
+$body: #{$panel}-body;
+$footer: #{$panel}-footer;
+
+.#{$panel}{
+    width: 100%;
+    color: $text-primary;
+    transition: .35s box-shadow;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 14px;
+    &:hover{
+        box-shadow: 2px 2px 12px $popover-shadow;
+    }
+    &-full{
+        .#{$body}{
+            padding: 0;
+        }
+    }
+    &-header{
+        color: $default;
+        background-color: rgba($inverse, .28);
+        line-height: 36px;
+        padding: 0 12px;
+        @extend %clearfix;
+    }
+    &-append{
+        float: right;
+        .#{$class-prefix}-icon{
+            line-height: inherit;
+        }
+    }
+    &-title{
+        float: left;
+        font-size: 16px;        
+        font-weight: 500;
+    }
+    &-body{
+        background-color: rgba($inverse, .36);
+        padding:12px;
+    }
+    &-footer{
+        padding: 12px;
+        background: rgba($inverse, .32);
+    }
+}

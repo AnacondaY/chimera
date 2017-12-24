@@ -1,0 +1,17 @@
+@mixin size-generator($prefix, $height, $top){
+    .#{$prefix}-value{
+        line-height: $height;
+    }
+    .#{$prefix}-placeholder{
+        line-height: $height;
+        height: $height;
+    }
+    .#{$prefix}-wrapper{
+        min-height: $height;
+    }
+    .#{$prefix}-arrow{
+        top: $top;
+    }
+}
+
+

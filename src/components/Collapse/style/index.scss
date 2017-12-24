@@ -1,0 +1,65 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+
+$collapse: #{$class-prefix}-collapse;
+
+.#{$collapse}{
+    font-size: 14px;
+    color: $default;
+    border-radius: 4px;
+    border: 1px solid $boundary;
+    position: relative;
+    &-item{
+        border-top: 1px solid $boundary;        
+        position: relative;
+        &-icon{
+            display: inline-block;
+            transition: transform .25s;   
+            transform-origin: center center;     
+            margin-right: 8px;    
+        }
+        &-header{
+            cursor: pointer;
+            padding: 8px 12px;
+            background: rgba($inverse, .25);
+        }
+        &-content{
+            background: rgba($inverse, .15);
+            padding: 12px;
+            display: none;
+        }
+        &:first-of-type{
+            border-top: none;
+        }
+        &-active{
+            .#{$collapse}-item{
+                &-content{
+                    display: block;
+                }
+                &-icon{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        &-disabled{
+            .#{$collapse}-item{
+                &-header{
+                    cursor:not-allowed;
+                    background: $disabled;                    
+                }
+            }  
+        }
+    }
+    &-simple{
+        border: none;
+        .#{$collapse}-item-header{
+            background: none;
+            &:hover{
+                background: rgba($inverse, .15);
+            }
+        }   
+        .#{$collapse}-item-content{
+            background: none;
+        }
+    }
+}

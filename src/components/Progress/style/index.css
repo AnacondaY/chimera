@@ -1,0 +1,58 @@
+.cmr-progress-circle .cmr-progress-tip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.cmr-progress-line .cmr-progress-tip {
+  margin-left: 8px;
+  line-height: 1.25; }
+
+.cmr-progress-bar {
+  margin-right: -50px;
+  padding-right: 50px;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box; }
+  .cmr-progress-bar-outer {
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: relative; }
+  .cmr-progress-bar-inner {
+    display: inline-block;
+    height: 100%;
+    border-radius: 100px;
+    transition: width .15s linear; }
+
+.cmr-progress-tip {
+  font-size: 12px;
+  display: inline-block;
+  color: #fff; }
+
+.cmr-progress-inside .cmr-progress-bar {
+  height: 16px; }
+
+.cmr-progress-inside .cmr-progress-tip {
+  float: right;
+  padding-right: 14px; }
+
+.cmr-progress-outside .cmr-progress-bar {
+  height: 8px; }
+
+.cmr-progress-processing .cmr-progress-bar-inner {
+  background-color: #1b98f3; }
+
+.cmr-progress-success .cmr-progress-bar-inner {
+  background-color: #20b96d; }
+
+.cmr-progress-error .cmr-progress-bar-inner {
+  background-color: #f05a5a; }
+
+.cmr-progress-paused .cmr-progress-bar-inner {
+  background-color: #fac525; }
+
+.cmr-progress-circle {
+  display: inline-block;
+  position: relative; }
+  .cmr-progress-circle .cmr-progress-tip {
+    font-size: 16px; }

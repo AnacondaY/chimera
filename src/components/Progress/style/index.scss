@@ -1,0 +1,78 @@
+@import '../../style/theme/default.scss';
+@import '../../style/main/base.scss';
+@import '../../style/main/holder.scss';
+
+$pg: #{$class-prefix}-progress;
+.#{$pg} {
+    &-line {
+        .#{$pg}-tip{
+            margin-left: 8px;
+            line-height: 1.25;
+        }
+    }
+    &-bar {
+        margin-right: -50px;
+        padding-right: 50px;
+        width: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+        &-outer {
+            border-radius: 100px;
+            background-color: $control-background;
+            position: relative;
+        }
+        &-inner {
+            display: inline-block;
+            height: 100%;
+            border-radius: 100px;
+            transition: width .15s linear;
+        }
+    }
+    &-tip {
+        font-size: 12px;
+        display: inline-block;
+        color: $default;
+    }
+    &-inside {
+        .#{$pg}-bar{
+            height: 16px;
+        }
+        .#{$pg}-tip {
+            float: right;
+            padding-right: 14px;
+        }
+    }
+    &-outside {
+        .#{$pg}-bar{
+            height: 8px;
+        }
+    }
+    &-processing {
+        .#{$pg}-bar-inner {
+            background-color: $primary;
+        }
+    }
+    &-success {
+        .#{$pg}-bar-inner {
+            background-color: $success;
+        }
+    }
+    &-error {
+        .#{$pg}-bar-inner {
+            background-color: $error;
+        }
+    }
+    &-paused {
+        .#{$pg}-bar-inner {
+            background-color: $warning;
+        }
+    }
+    &-circle {
+        display: inline-block;
+        position: relative;
+        .#{$pg}-tip{
+            font-size: 16px;
+            @extend %absolute-middle;
+        }
+    }
+}

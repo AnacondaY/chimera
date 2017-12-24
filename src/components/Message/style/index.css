@@ -1,0 +1,27 @@
+.cmr-message {
+  background: rgba(0, 0, 0, 0.78);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.55);
+  position: fixed;
+  min-width: 240px;
+  transform: translate(-50%, 0);
+  left: 50%;
+  top: 0;
+  transition: top .35s; }
+  .cmr-message-icon {
+    font-size: 18px;
+    display: inline-block;
+    width: 36px;
+    text-align: center; }
+  .cmr-message-content {
+    font-size: 14px;
+    padding: 8px;
+    color: #fff;
+    display: inline-block; }
+  .cmr-message-success .cmr-message-icon {
+    color: #20b96d; }
+  .cmr-message-error .cmr-message-icon {
+    color: #f05a5a; }
+  .cmr-message-info .cmr-message-icon {
+    color: #22ccc2; }
+  .cmr-message-warning .cmr-message-icon {
+    color: #fac525; }

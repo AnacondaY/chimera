@@ -1,0 +1,62 @@
+@import '../../style/main/base.scss';
+@import '../../style/main/holder.scss';
+$row: #{$class-prefix}-row;
+$col: #{$class-prefix}-col;
+$lg: #{$col}-lg;
+$md: #{$col}-md;
+$sm: #{$col}-sm;
+$xs: #{$col}-xs;
+
+@mixin col-generator($type: $col){
+    @for $i from 1 through 24 {
+        $span: percentage($i / 24);
+        .#{$type}-#{$i} {
+            width: $span;
+        }
+        .#{$type}-offset-#{$i} {
+            margin-left: #{$span};
+        }
+        .#{$type}-push-#{$i} {
+            left: #{$span};
+        }
+        .#{$type}-pull-#{$i} {
+            right: #{$span};
+        }
+    }
+}
+
+.#{$row} {
+    display: block;
+    box-sizing: border-box;
+    @extend %clearfix;
+}
+
+.#{$col} {
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+
+@include col-generator();
+
+@media (max-width: 767px){
+    @include col-generator($xs);
+}
+
+@media (min-width: 768px){
+    @include col-generator($sm);
+}
+
+@media (min-width: 992px){
+    @include col-generator($md);
+}
+
+@media (min-width:1200px){
+    @include col-generator($lg);
+}
+
+
+
+
+
+

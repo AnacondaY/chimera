@@ -1,0 +1,98 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+
+$dp: #{$class-prefix}-datepicker;
+
+@mixin cell-generator($text, $hover, $bg: inherit){
+    color: $text;
+    &:hover{
+        color: $hover;
+    }
+    .#{$dp}-table-cell-value{
+        background-color: $bg;
+    }       
+}
+
+.#{$dp}{
+    &-table{
+        background-color: $popover-background-primary;
+        color: $default;
+        font-size: 12px;
+        th{
+            text-align: center;
+        }
+        &-date{
+            .#{$dp}-table-cell{
+                width: 32px;
+                height: 32px;
+                box-sizing: border-box;
+                &-value{
+                    padding: 4px;
+                }
+            }
+        }
+        &-month,
+        &-year{
+            font-size: 14px;
+            .#{$dp}-table-cell{
+                padding: 12px 16px;
+                &-value{
+                    padding:8px;
+                }
+            }
+        }
+        &-cell{
+            cursor: pointer;
+            text-align: center;
+            transition: .25s;
+            &:hover{
+                color: $highlight;
+            }
+            &-selected,
+            &-start,
+            &-end{
+                @include cell-generator($text-primary, $text-primary, $highlight);
+            }
+            &-inrange{
+                color: $text-primary;
+                background-color: $highlight;
+                &:hover{
+                    color: $text-primary;
+                }
+            }
+            &-past{
+                @include cell-generator($disabled, $disabled);
+            }
+            &-future{
+                @include cell-generator($disabled, $disabled);
+            }
+            &-current{
+                position: relative;
+                background-color: transparent;
+                color: $primary;
+                padding: 0;
+                &:hover{
+                    color: $primary;
+                }
+                &:before{
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 0;
+                    height: 0;
+                    border-top: .5em solid $primary;
+                    border-left: .5em solid transparent;
+                }
+                .#{$dp}-table-cell-value{
+                    background-color: transparent;
+                }
+            }
+            &-disabled{
+                cursor: not-allowed;
+                background: $disabled;
+                @include cell-generator(darken($disabled, 10), darken($disabled, 10), $disabled);
+            }
+        }
+    }
+}

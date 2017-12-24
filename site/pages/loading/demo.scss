@@ -1,0 +1,11 @@
+.demo-loading{
+    font-size: 14px;
+    position: relative; 
+    margin-top: 12px;   
+    &-list{
+        color: #fff;
+        &>li{
+            padding: 12px;
+        }
+    }
+}

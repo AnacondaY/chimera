@@ -1,0 +1,88 @@
+.cmr-carousel-list:before, .cmr-carousel-list:after {
+  content: '';
+  display: table; }
+
+.cmr-carousel-list:after {
+  clear: both; }
+
+.cmr-carousel {
+  position: relative;
+  width: 100%; }
+  .cmr-carousel-fade .cmr-carousel-item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    float: none; }
+  .cmr-carousel-visible {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; }
+  .cmr-carousel-list {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .cmr-carousel-item {
+    float: left;
+    transition: transform 2.5s;
+    width: 100%;
+    height: 100%; }
+  .cmr-carousel-indicators {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    bottom: 10%; }
+  .cmr-carousel-indicator {
+    cursor: pointer;
+    display: inline-block;
+    height: 2px;
+    width: 8px;
+    background: #fff;
+    margin: 0 4px;
+    transition: width .25s; }
+    .cmr-carousel-indicator-active {
+      width: 12px;
+      background: #04d8b5; }
+  .cmr-carousel-controller {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+    text-align: center; }
+    .cmr-carousel-controller-left, .cmr-carousel-controller-right {
+      cursor: pointer;
+      padding: 0;
+      opacity: 0;
+      background: rgba(255, 255, 255, 0.36);
+      transition: .35s .15s;
+      color: #fff;
+      border: none;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: 28px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%); }
+    .cmr-carousel-controller-left {
+      left: 12px; }
+    .cmr-carousel-controller-right {
+      right: 12px; }
+    .cmr-carousel-controller-show .cmr-carousel-controller-left, .cmr-carousel-controller-show .cmr-carousel-controller-right {
+      opacity: 1; }
+    .cmr-carousel-controller-show .cmr-carousel-controller-left {
+      transform: translate(100%, -50%); }
+    .cmr-carousel-controller-show .cmr-carousel-controller-right {
+      transform: translate(-100%, -50%); }

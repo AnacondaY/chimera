@@ -1,0 +1,95 @@
+$default: #fff;
+$inverse: #000;
+$highlight: #04d8b5;
+$error: #f05a5a;
+.renderer{
+    @for $i from 1 through 6{
+        &-title-#{$i}{
+            color: $default;
+            font-size: #{26 - $i * 2}px;
+            font-weight: 800 - $i * 100;
+            margin: 12px 0;
+        }
+    }
+    &-paragraph{
+        font-size: 14px;
+        line-height: 1.85;
+        margin: 8px 0;
+        color: $default;
+    }
+    &-table{
+        color: $default;
+        width: 100%;
+        font-size: 14px;
+        border-spacing: 1px;
+        border-collapse: separate;
+        line-height: 2;
+        text-align: left;
+        &-header{
+            font-weight: 600;
+            background: rgba($inverse, .25);
+            th{
+                padding-left: 12px;
+                &:nth-of-type(1){
+                    width: 10%;
+                }
+                &:nth-of-type(2){
+                    width: 40%;
+                }
+                &:nth-of-type(3){
+                    width: 40%;
+                }
+                &:nth-of-type(4){
+                    width: 10%;
+                }
+            }
+        }
+        &-body{
+            background: rgba($inverse, .15);
+            td{
+                padding: 4px 12px;
+            }
+        }
+    }
+    &-code{
+        background: rgba($inverse, .3);
+        border-radius: 4px;
+        padding: 2px 10px;
+        font-size: 14px;
+        color: $highlight;
+        font-family: inherit;
+        word-break: keep-all;
+        margin: 0 4px;
+    }
+    &-codeblock{
+        font-family: inherit;
+        color: $highlight;
+    }
+    &-a{
+        color: $highlight;
+        font-weight: 600;
+    }
+    &-list{
+        color: $default;
+        list-style-type: circle;
+        margin: 12px 0;
+        padding-left: 24px;
+        &-item{
+            padding: 6px 0;
+        }
+    }
+    &-quote{
+        background: rgba($inverse, .15);
+        padding: 6px 0;
+        margin: 6px 0;
+        padding-left: 24px;
+        border-left: 4px solid $highlight;
+        font-style: italic;
+        .renderer-paragraph{
+            margin: 0;
+        }
+    }
+    &-strong{
+        color: $error;
+    }
+}

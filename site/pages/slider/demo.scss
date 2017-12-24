@@ -1,0 +1,15 @@
+.demo-slider{
+    .cmr-slider{
+        margin-bottom: 18px;
+    }
+    &-vertical{
+        height: 250px;
+        padding-bottom: 36px;
+        margin-left: 36px;
+        box-sizing: border-box;
+        .cmr-slider{
+            float: left;
+            margin-right: 36px;
+        }
+    }
+}

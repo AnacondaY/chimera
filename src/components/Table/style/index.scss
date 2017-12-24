@@ -1,0 +1,200 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import '../../style/main/holder.scss';
+$table: #{$class-prefix}-table;
+$header: #{$table}-header;
+$body: #{$table}-body;
+$row: #{$table}-row;
+
+.#{$table} {
+    font-size: 14px;
+    width: 100%;
+    font-size: 14px;
+    position: relative;
+    overflow: auto;
+    &-header{
+        position: relative;
+        color: $default;
+        font-size: 14px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        &-cell{
+            background: rgba($inverse, .45);
+            padding: 0 8px;
+            position: relative;
+            &-label{
+                padding: 8px 0;
+                height: 100%;
+            }
+            &-resize{
+                position: absolute;
+                width: 8px;
+                right: 0;
+                top: 0;
+                height: 100%;
+                &:hover{
+                    cursor: col-resize;
+                }
+            }
+            &-selectable{
+                text-align: center;
+            }
+        }
+    }
+    &-body{
+        color: $default;
+        margin-top: -1px;
+        font-size: 14px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        &-cell{
+            position: relative;
+            padding: 8px 0;
+            &-value{
+                word-break: break-all;
+                padding: 0 8px;
+            }
+            &-selectable{
+                text-align: center;
+            }
+            &-expandable{
+                text-align: center;
+            }
+            &-none{
+                text-align: center;
+            }
+        }
+        &-wrapper{
+            overflow: auto;
+        }
+    }
+    &-row{
+        background: rgba($inverse, .22);        
+        transition: background .25s;
+        &-expanded{
+            background: rgba($inverse, .18);
+            box-shadow: inset 0 2px 0 rgba($inverse, .15);
+        }
+        &-highlight{
+            background: rgba($inverse, .28);
+        }
+    }
+    &-bordered{
+        .#{$header}{
+            border-spacing: 1px;
+            border-collapse: separate;
+        }
+        .#{$body}{
+            border-spacing: 1px;
+            border-collapse: separate;
+        }
+    }
+    &-striped{
+        .#{$row}{
+            &-odd{
+
+            }
+            &-even{
+                background: rgba($inverse, .3);
+            }
+        }
+    }
+    &-fixed{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        bottom: 15px;
+        overflow-x: hidden;
+        background: rgba($inverse, .65);
+        overflow: hidden;
+        &-left{
+            left: 0;
+            box-shadow: 2px 0 8px rgba($inverse, .25);
+        }
+        &-right{
+            right: 0;
+            box-shadow: -2px 0 8px rgba($inverse, .25);
+        }
+    }
+    &-dragger{
+        position: absolute;
+        height: 100%;
+        background: rgba($default, .45);
+        left: 43%;
+        top: 0;
+        width: 1px;
+        visibility: hidden;
+    }
+    &-sort-icon{
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 12px;
+        line-height: 1;
+        &-highlight{
+            color: $highlight;
+        }
+        &-up,
+        &-down{
+            height: 6px;
+            transition: .25s color;
+            &:hover{
+                color: $highlight;
+            }
+        }
+        &-up{
+            margin-bottom: 1px;
+        }
+        &-down{
+            margin-top: 1px;
+        }
+    }
+    &-filter-icon{
+        cursor: pointer;
+        transition: 0.25s color;
+        &:hover{
+            color: $highlight;
+        }
+        &-active{
+            color: $highlight;
+        }
+    }
+    &-expand-icon{
+        cursor: pointer;
+    }
+    &-menu{
+        position: relative;
+        border-radius: 4px;
+        background: $popover-background-primary;
+        color:$default;
+        font-size: 14px;
+        box-shadow: 2px 2px 12px rgba($inverse, .15);
+        overflow: hidden;
+        .#{$class-prefix}-checkbox{
+            &-mock{
+                border-color: $title;
+            }
+        }
+        
+        &-item{
+            cursor: pointer;
+            padding: 6px 12px;
+            transition: .25s;
+            @extend %clearfix;
+            &:hover{
+                color: $highlight;
+                background: $popover-background-secondary;
+            }
+            a{
+                color: inherit;
+            }
+            &-left{
+                float: left;    
+                margin-right: 8px;
+            }
+            &-right{
+                float: right;
+            }
+        }
+    }
+}

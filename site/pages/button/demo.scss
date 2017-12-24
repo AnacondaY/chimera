@@ -1,0 +1,15 @@
+.demo-button{
+    &-basic,
+    &-icon,
+    &-size,
+    &-disabled{
+        .cmr-button{
+            margin: 0 12px 12px 0;
+        }
+    }
+    &-group{
+        .cmr-button-group{
+            margin: 0 12px 12px 0;
+        }
+    }
+}

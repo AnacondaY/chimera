@@ -1,0 +1,46 @@
+$skyblue: #1b98f3;
+$lightblue: #22ccc2;
+$cyan: #04d8b5;
+.demo-layout{
+    
+    &-basic{
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        .cmr-layout{
+            &-header{
+                background: $lightblue;
+                line-height: 32px;
+            }
+            &-footer{
+                background: $lightblue;
+                line-height: 32px;
+            }
+            &-content{
+                background: $skyblue;
+                line-height: 84px;
+            }
+            &-sider{
+                background: $cyan;
+            }
+        }
+        &>.cmr-layout{
+            &:not(:last-of-type){
+                margin-bottom: 18px;
+            }
+        }
+    }
+    &-nav{
+        color: #fff;        
+        text-align: center;        
+        .cmr-layout{
+            &-content{
+                background: rgba(#000, .25);
+            }
+            &-footer{
+                line-height: 32px;
+                background: rgba(#000, .45);
+            }
+        }
+    }
+}

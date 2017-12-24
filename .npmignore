@@ -1,0 +1,5 @@
+.vscode
+.idea
+scripts
+webpack.config.js
+node_modules

@@ -1,0 +1,48 @@
+.demo-uploader{
+    &-area{
+        height: 240px;
+        line-height: 36px;
+        border-radius: 8px;
+        border: 1px dashed #fff;
+        color: #fff;
+        text-align: center;
+        transition: .35s border-color;
+        cursor: pointer;
+        &-wrapper{
+            margin-top:54px;
+        }
+        .cmr-icon{
+            font-size: 54px;
+            color: #04d8b5;
+        }
+        &-hover{
+            border-color: #04d8b5;
+        }
+    }
+    &-avatar{
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        border-radius: 8px;
+        border: 1px dashed #fff;
+        color: #fff;
+        font-size: 28px;
+        font-weight: normal;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+        .cmr-icon{
+            line-height: 120px;
+        }
+    }
+    &-preview{
+        border: none;
+        height: 100%;
+        width: 100%;
+    }
+    &-manual{
+        .cmr-button{
+            margin-top: 12px;
+        }
+    }
+}

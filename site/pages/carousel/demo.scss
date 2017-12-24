@@ -1,0 +1,11 @@
+.demo-carousel{
+    height: 240px;
+    &-item{
+        line-height: 240px;
+        background: #1b98f3;
+        text-align: center; 
+        color: #fff;
+        font-size: 24px;
+        font-weight: bolder;
+    }
+}

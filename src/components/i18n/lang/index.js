@@ -1,0 +1,1 @@
+export { default as zhCH } from './zh-CN';

@@ -1,0 +1,22 @@
+.cmr-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  position: relative; }
+  .cmr-layout-has-sider {
+    flex-direction: row; }
+  .cmr-layout-content {
+    position: relative;
+    flex: auto; }
+  .cmr-layout-sider {
+    overflow-x: hidden;
+    transition: width .25s;
+    position: relative; }
+    .cmr-layout-sider-right {
+      order: 1; }
+  .cmr-layout-header {
+    flex: auto;
+    position: relative; }
+  .cmr-layout-footer {
+    flex: auto;
+    position: relative; }

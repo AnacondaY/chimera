@@ -1,0 +1,20 @@
+.demo-progress-list{
+    .cmr-progress-line{
+        margin-bottom: 12px;
+    }
+    .demo-icon-success{
+        color: #20b96d;
+    }
+    .demo-icon-error{
+        color: #f05a5a;
+    }
+    & + & {
+        margin-top: 16px;
+    }
+    &-circle{
+        .demo-icon-success,
+        .demo-icon-error{
+            font-size: 28px;
+        }
+    }
+}

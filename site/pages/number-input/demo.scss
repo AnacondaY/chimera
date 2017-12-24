@@ -1,0 +1,6 @@
+.demo-number-input{
+    width: 120px;
+    &:not(:last-of-type){
+        margin-bottom: 12px;
+    }
+}

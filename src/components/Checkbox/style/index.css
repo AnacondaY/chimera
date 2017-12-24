@@ -1,0 +1,65 @@
+.cmr-checkbox-indeterminate .cmr-checkbox-mock:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.cmr-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer; }
+  .cmr-checkbox-input {
+    position: relative; }
+  .cmr-checkbox-mock {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: background .25s;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #a6a6a6; }
+    .cmr-checkbox-mock:after {
+      content: '';
+      position: absolute; }
+  .cmr-checkbox-origin {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0; }
+  .cmr-checkbox-text {
+    font-size: 14px;
+    color: #d0d0d0;
+    vertical-align: middle;
+    margin-left: 4px; }
+  .cmr-checkbox-checked .cmr-checkbox-mock {
+    background: #04d8b5; }
+    .cmr-checkbox-checked .cmr-checkbox-mock:after {
+      left: 4px;
+      width: 5px;
+      height: 10px;
+      transform: rotate(45deg);
+      transform-origin: center center;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff; }
+  .cmr-checkbox-indeterminate .cmr-checkbox-mock {
+    background: #04d8b5; }
+    .cmr-checkbox-indeterminate .cmr-checkbox-mock:after {
+      height: 2px;
+      width: 12px;
+      background: #fff; }
+  .cmr-checkbox-disabled {
+    cursor: not-allowed; }
+    .cmr-checkbox-disabled .cmr-checkbox-mock {
+      background: #9b9a9a; }
+  .cmr-checkbox:not(:last-of-type) {
+    margin-right: 6px; }

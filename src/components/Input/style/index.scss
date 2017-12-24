@@ -1,0 +1,197 @@
+@import '../../style/theme/default.scss';
+@import '../../style/main/base.scss';
+
+$input: #{$class-prefix}-input;
+$select: #{$class-prefix}-select;
+$icon: #{$input}-icon;
+$sizes: 'large' 'middle' 'small';
+@mixin size($height){
+    &.#{$input}{
+        line-height: $height;
+        height: $height;
+    }
+}
+
+.#{$input}{
+    display: inline-block;
+    vertical-align: middle;
+    color: $text-primary;   
+    border-radius: 4px;  
+    width: 100%;  
+    &-origin{
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 4px;  
+        background: $control-background;
+        color: $text-primary;
+        padding-left: 14px;
+        font-size: 14px;
+        box-sizing: border-box;
+        border: 1px solid $boundary;
+        transition: .25s border-color;
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &::-ms-input-placeholder{
+            color: $text-primary;
+        }
+        &:hover,
+        &:focus{ 
+            outline: none;
+        }
+    }
+    &-textarea{
+        height: auto;
+        line-height: 1.2;
+        font-size: 14px;
+        padding: 8px 8px 8px 12px;
+        width: 100%;
+    }
+    &-addon{
+        display: inline-table;
+        border-collapse: separate;
+        border-spacing: 1px;
+        .#{$input}-origin{
+            display: table-cell;
+        }
+        .#{$select}-box{
+            background: transparent;
+        }
+        &-before,
+        &-after{
+            display: table-cell;
+            text-align: center;
+            font-size: 14px;
+            color: $text-primary;
+            background: $control-background;
+            vertical-align: middle;
+            padding: 0 6px;
+        }
+        &-before{
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            &-had{
+                .#{$input}-origin{
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+        }
+        &-after{
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            &-had{
+                .#{$input}-origin{
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+        }
+    }
+    &-focused,
+    &-hovered{
+        .#{$input}-origin,
+        .#{$input}-textarea{
+            border-color: $highlight;
+            box-shadow: 0 0 6px rgba($highlight, .35);
+        }
+        .#{$icon}{
+            &-after,
+            &-before{
+                color: $highlight;
+                transition: color .25s;
+            }
+        }
+    }
+    &-icon{
+        position: relative;
+        display: inline-block;
+        background-color: $control-background;
+        .#{$input}-origin{
+            background-color:transparent;
+            padding: 0 12px;       
+        }
+        &-before,
+        &-after{
+            position: absolute;
+            font-size: 14px;
+            top:8px;
+        }
+        &-before{
+            left: 6px;
+            &-had{
+                .#{$input}-origin{
+                    padding-left: 24px;
+                }
+            }
+        }
+        &-after{
+            right: 6px;
+            &-had{
+                .#{$input}-origin{
+                    padding-right: 24px;
+                }
+            }
+        }
+        &-clean{
+            cursor: pointer;
+            transition: 0.25s color;
+            &:hover{
+                color: $highlight;
+            }
+        }
+    }
+    &-textarea{
+        background: $control-background;
+        border:1px solid $boundary;
+        color: $text-primary;
+        border-radius: 4px;
+        transition: border-color .25s;
+        &:hover,
+        &:focus{
+            border-color: $highlight;
+        }
+    }
+    &-disabled{
+        .#{$input}-origin,
+        .#{$input}-textarea{
+            cursor: not-allowed;
+            background: $disabled;
+            border-color: $boundary;
+            box-shadow: none;
+        }
+        &.#{$input}-number{
+            .#{$input}-addon{
+                &-before,
+                &-after{
+                    cursor: not-allowed;
+                    color: $disabled;
+                    &:hover{
+                        color: $disabled;
+                    }
+                }
+            }
+        }
+    }
+    @each $s in $sizes{
+        &-#{$s}{
+            @include size((40px - index($sizes, $s) * 4)); 
+            @if($s == 'small'){
+                font-size: 12px;
+                .#{$input}-origin{
+                    font-size: 12px;
+                }
+            }
+            .#{$icon}{
+                &-before,
+                &-after{
+                    top: 11px - index($sizes, $s);
+                    font-size: 20px - index($sizes, $s) * 2;
+                }
+            }
+        }
+    }
+}
+
+

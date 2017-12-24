@@ -1,0 +1,40 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+
+$tree: #{$class-prefix}-tree;
+$branch: #{$tree}-branch;
+
+.#{$tree}{
+    color: $title;
+    &-branch{
+        &-selected{
+            .#{$branch}-expander{
+                border: {
+                    top: 4px solid $title;
+                    left: 4px solid transparent;
+                    right: 4px solid transparent;
+                }
+            }
+            .#{branch}-content{
+                display: block;
+            }
+        }
+        &-expander{
+            cursor: pointer;
+            transition: transform .25s;
+            font-size: 14px;
+            display: inline-block;
+            &-collapsed{
+                transform: rotate(-90deg);
+            }
+        }
+        &-content{
+        }
+        &-label{
+            font-size: 14px;
+        }
+        .#{$branch}{
+            margin-left: 28px;
+        }
+    }
+}

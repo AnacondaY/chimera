@@ -1,0 +1,74 @@
+.cmr-demo{
+    background: rgba(#000, .25);
+    margin: 12px 0;
+    &-meta{
+        color: #fff;
+        padding: 12px 12px 0;
+        .renderer-list{
+            font-size: 14px;
+        }
+    }
+    &-render{
+        padding: 12px 12px 0;
+        margin-bottom: 12px;
+    }
+    &-code{
+        padding: 12px;
+        overflow-x: auto;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.75;
+        code{
+            font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;;            
+        }
+    }
+    &-control{
+        background: rgba(#000, .15);  
+        animation: cursor .8s ease-in infinite backwards;      
+        &-button{
+            display: block;
+            width: 100%;
+            color: #fff;
+            background: transparent;
+            line-height: 32px;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden;
+            transition: .25s;
+            background: rgba(#000, .15); 
+            &-active,           
+            &:hover{
+                color: #04d8b5;
+            }
+            &-arrow{
+                display: inline-block;
+                margin-right: 8px;
+                font-size: 16px;
+                transition: .25s transform;
+            }
+        }
+    }
+}
+
+@keyframes cursor{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+@keyframes keepDown{
+    0%{
+        transform: translate(0, -20%);
+        opacity: .1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(0, 20%);
+        opacity: .1;
+    }
+}

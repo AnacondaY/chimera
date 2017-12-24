@@ -1,0 +1,16 @@
+.demo-steps{
+    .cmr-steps{
+        margin-bottom: 24px;
+    }
+    .cmr-steps-vertical{
+        height: 240px;
+    }
+    &-vertical{
+        height: 280px;
+        padding-left: 36px;
+        .cmr-steps {
+            display: inline-block;
+            margin-right: 36px;
+        }
+    }
+}

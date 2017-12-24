@@ -1,0 +1,196 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import '../../style/main/holder.scss';
+
+$nav: #{$class-prefix}-navigation;
+$item: #{$nav}-item;
+$subnav: #{$nav}-subnav;
+$menu: #{$nav}-menu;
+
+.#{$nav} {
+    font-size: 14px;
+    background-color: rgba($inverse, .65);
+    box-sizing: border-box;
+    @extend %clearfix;
+    &-item {
+        cursor: pointer;
+        transition: .25s;
+        color: $default;
+        &:hover {
+            color: $highlight;
+        }
+        &-active{
+            color: $highlight;
+            &:hover{
+                color: $highlight;
+            }
+        }
+        &-disabled{
+            cursor: not-allowed;
+            color: $disabled;
+            &:hover{
+                color: $disabled;
+            }
+        }
+        &-group{
+            &-title{
+                font-size: 12px;
+                color: $default;
+                text-align: left;
+                padding-left: 8px;             
+            }
+            &:first-of-type{
+                padding-top: 12px;            
+            }
+        }
+        .#{$class-prefix}-icon{
+            margin-right: 8px;
+        }
+    }
+    &-subnav{
+        position: relative;
+        &-title{
+            cursor: pointer;   
+            color: $default;       
+            transition: .25s;              
+            &:hover{
+                color: $highlight;
+            }
+            &-active{
+                border-color: $highlight;
+            }
+            .#{$class-prefix}-icon{
+                margin-right: 8px;
+            }
+        }
+        &-disabled{
+            .#{$subnav}-title{
+                cursor:not-allowed;
+                color: $disabled;
+            }
+        }
+    }
+    &-menu{
+        background-color: $popover-background-primary;
+        overflow: hidden;
+        min-width: 100%;
+        box-shadow: 2px 2px 12px $popover-shadow;
+        border-radius: 4px;
+        margin-top: 4px;
+        font-size: 14px;
+        .#{$item}{
+            padding: 8px 12px;
+        }
+    }
+    &-horizontal{
+        border-bottom: 1px solid $boundary;    
+        padding-left: 54px;
+        .#{$item}{
+            padding: 0 24px;
+            float: left;    
+            line-height: 54px;
+            height: 54px;
+            text-align: center;
+            box-sizing: border-box;
+            border-bottom: 2px solid transparent; 
+            &:hover{
+                border-color: $highlight;
+            }
+            &-active{
+                border-color: $highlight;
+            } 
+            &-disabled{
+                border-color: transparent;
+                &:hover{
+                    border-color: transparent;
+                }
+            }
+        }
+        .#{$subnav}{
+            float: left;
+            &-title{
+                padding: 0 12px;
+                text-align: center;
+                line-height: 54px;
+                height: 54px;
+                box-sizing: border-box;
+                border-bottom: 2px solid transparent; 
+            }
+            &-active,
+            &-open{
+                .#{$subnav}-title{
+                    color: $highlight;
+                    border-color: $highlight;
+                }
+            }
+            &-title{
+                &:hover{
+                    color: $highlight;
+                    border-color: $highlight;
+                }
+            }
+            &-disabled{
+                .#{$subnav}-title{
+                    color: $disabled;
+                    border-bottom: transparent;
+                    &:hover{
+                        border-bottom: transparent;
+                    }
+                }
+            }
+            .#{$item}{
+                padding: 12px;
+                float: none;
+                height: auto;
+                line-height: 1;
+                &:hover{
+                    background-color: $highlight;
+                }
+                &-active{
+                    border-color: transparent;
+                }
+            }
+            .#{$menu}{
+                position: absolute;
+                z-index: 1000;
+            }
+        }
+    }
+    &-vertical{
+        .#{$item}{
+            padding: 12px;
+        }
+        .#{$subnav}{
+            &-title{
+                padding: 12px;
+            }
+        }
+        .#{$menu}{
+            margin: 0;
+            box-sizing: border-box;
+            padding-left: 12px;
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
+    .#{$class-prefix}-form{
+        margin: 0;
+        margin-top: 12px;
+        &-field{
+            margin-bottom: 0;
+        }
+    }
+    &-arrow{
+        padding: 0 4px;
+        transition: .25s transform;
+        display: inline-block;
+        transform-origin: 50% 50%;
+        text-align: center;
+        .#{$class-prefix}-icon{
+            margin-right: 0;
+        }
+        &-active{
+            transform: rotate(180deg);
+        }
+    }
+}

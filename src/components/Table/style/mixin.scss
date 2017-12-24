@@ -1,0 +1,6 @@
+@mixin tr-generator($bg, $color){
+    &{
+        background-color: $bg;
+        color:$color;    
+    }
+}

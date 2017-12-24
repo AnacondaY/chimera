@@ -1,0 +1,73 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import '../../style/main/holder.scss';
+@import './mixin.scss';
+$form: #{$class-prefix}-form;
+$field: #{$form}-field;
+$control: #{$form}-control;
+$label: #{$form}-label;
+.#{$form} {
+    position: relative;
+    margin-bottom: 16px;
+    &-field {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 22px;
+        color: $form-font;
+        &-required{
+            color: $error;
+        }
+        &-error {
+            @include field-generator($form-field-error, $form-field-error);
+        }
+        &-success {
+            @include field-generator($form-field-success, $form-field-success);
+        }
+        &-warning {
+            @include field-generator($form-field-warn, $form-field-warn);
+        }
+        @extend %clearfix;
+    }
+    &-label {
+        vertical-align: middle;
+        line-height: 32px;
+        padding-right: 14px;
+        font-size: 14px;
+        box-sizing: border-box;
+        float: left;
+    }
+    &-control {
+        position: relative;
+        line-height: 32px;
+    }
+    &-inline {
+        display: inline-block;
+        .#{$field} {
+            display: inline-block;
+            margin-right: 14px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+    &-vertical {
+        .#{$label} {
+            display: block;
+            float: none;
+        }
+        .#{$control} {
+            display: block;
+        }
+    }
+    &-feedback{
+        position: absolute;
+        line-height: 1;
+        font-size: 12px;
+        margin-top: 4px;
+    }
+    &-extra{
+        font-size: 12px;
+        line-height: 1;
+        margin-top: 4px;
+    }
+}

@@ -1,0 +1,117 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import '../../style/mixins/index.scss';
+
+$tp: #{$class-prefix}-tooltip;
+$arrow: #{$tp}-arrow;
+
+.#{$tp}{
+    font-size: 12px;
+    position: absolute;
+    &-top-center{
+        .#{$arrow}{
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            @include triangle-generator($inverse, 6px, 6px, 'down');
+        }
+    }
+    &-bottom-center{
+        .#{$arrow}{
+            top: 1px;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            @include triangle-generator($inverse, 6px, 6px, 'up');
+        }
+    }
+    &-left-center{
+        .#{$arrow}{
+            top: 50%;
+            right: 1px;
+            transform: translate(100%, -50%);
+            @include triangle-generator($inverse, 6px, 6px, 'right');
+        }
+    }
+    &-right-center{
+        .#{$arrow}{           
+            top: 50%;
+            left: 0;
+            transform: translate(-100%, -50%);
+            @include triangle-generator($inverse, 6px, 6px, 'left');
+        }
+    }
+    &-top-left{
+        .#{$arrow}{
+            top: 100%;
+            left: 12px;
+            @include triangle-generator($inverse, 6px, 6px, 'bottom');
+        }
+    }
+    &-top-right{
+        .#{$arrow}{
+            top: 100%;
+            right: 12px;
+            @include triangle-generator($inverse, 6px, 6px, 'bottom');
+        }
+    }
+    &-bottom-left{
+        .#{$arrow}{
+            left: 12px;
+            top:0;
+            transform: translate(0, -100%);
+            @include triangle-generator($inverse, 6px, 6px, 'up');
+        }
+    }
+    &-bottom-right{
+        .#{$arrow}{
+            right: 12px;
+            top: 0;
+            transform: translate(0, -100%);
+            @include triangle-generator($inverse, 6px, 6px, 'up');
+        }
+    }
+    &-left-top{
+        .#{$arrow}{
+            top: 6px;
+            right: 0;
+            transform: translate(100%, 0);
+            @include triangle-generator($inverse, 6px, 6px, 'right');
+        }
+    }
+    &-right-top{
+        .#{$arrow}{
+            top: 6px;
+            left: 0;
+            transform: translate(-100%, 0);
+            @include triangle-generator($inverse, 6px, 6px, 'left');
+        }
+    }
+    &-left-bottom{
+        .#{$arrow}{
+            bottom: 6px;
+            right: 0;
+            transform: translate(100%, 0);
+            @include triangle-generator($inverse, 6px, 6px, 'right');
+        }
+    }
+    &-right-bottom{
+        .#{$arrow}{
+            bottom: 6px;
+            left: 0;
+            transform: translate(-100%, 0);
+            @include triangle-generator($inverse, 6px, 6px, 'left');
+        }
+    }
+    &-wrapper{   
+        display: inline-block;
+    }
+    &-arrow{
+        position: absolute;
+    }
+    &-content{
+        color: $default;
+        background: $inverse;
+        padding: 6px;
+        border-radius: 4px;
+    }
+}

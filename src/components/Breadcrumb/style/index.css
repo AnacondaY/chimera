@@ -1,0 +1,29 @@
+.cmr-breadcrumb:before, .cmr-breadcrumb:after {
+  content: '';
+  display: table; }
+
+.cmr-breadcrumb:after {
+  clear: both; }
+
+.cmr-breadcrumb {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px; }
+  .cmr-breadcrumb-item {
+    float: left;
+    color: #d0d0d0;
+    vertical-align: bottom; }
+    .cmr-breadcrumb-item-separator {
+      padding: 0 8px;
+      text-align: center; }
+    .cmr-breadcrumb-item-link {
+      transition: .25s color; }
+    .cmr-breadcrumb-item:not(:last-of-type) .cmr-breadcrumb-item-link {
+      cursor: pointer; }
+      .cmr-breadcrumb-item:not(:last-of-type) .cmr-breadcrumb-item-link:hover {
+        color: #04d8b5; }
+    .cmr-breadcrumb-item:last-of-type .cmr-breadcrumb-item-separator {
+      display: none; }
+    .cmr-breadcrumb-item:last-of-type .cmr-breadcrumb-item-link {
+      font-weight: 500; }

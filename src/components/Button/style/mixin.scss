@@ -1,0 +1,39 @@
+@import '../../style/main/base.scss';
+@mixin button-generator($bg, $color, $hover-bg: lighten($bg, 6), $press-bg: darken($bg, 6)){
+    background-color: $bg;
+    color: $color;
+    border-color: darken($bg, 10);
+    &:hover{
+        background: $hover-bg;
+    }
+    &:active{
+        background: $press-bg;
+    }
+    &.#{$class-prefix}-button-loading{
+        cursor: default;
+        background: lighten($bg, 20);
+        border-color: lighten($bg, 16);
+    }
+}
+
+@mixin link-generator($className, $type, $color, $hover: lighten($color, 6)){
+    &.#{$className}-#{$type}{
+        color: $color;
+        &:hover{
+            color: $hover;
+            background: none;
+        }
+        &:active{
+            color: $hover;
+            background: none;
+        }
+    }
+}
+
+@mixin size-generator($font-size, $radius, $height, $padding...){
+    font-size: $font-size;
+    padding: $padding;
+    border-radius: $radius;
+    height: $height;
+    line-height: $height;
+}

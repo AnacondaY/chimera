@@ -1,0 +1,19 @@
+.cmr-tree {
+  color: #d0d0d0; }
+  .cmr-tree-branch-selected .cmr-tree-branch-expander {
+    border-top: 4px solid #d0d0d0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; }
+  .cmr-tree-branch-selected .branch-content {
+    display: block; }
+  .cmr-tree-branch-expander {
+    cursor: pointer;
+    transition: transform .25s;
+    font-size: 14px;
+    display: inline-block; }
+    .cmr-tree-branch-expander-collapsed {
+      transform: rotate(-90deg); }
+  .cmr-tree-branch-label {
+    font-size: 14px; }
+  .cmr-tree-branch .cmr-tree-branch {
+    margin-left: 28px; }

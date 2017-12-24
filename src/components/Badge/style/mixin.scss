@@ -1,0 +1,29 @@
+@mixin symbol-generator($bg, $prefix){
+    .#{$prefix}-symbol{
+        background: $bg;
+        &-blink{
+            &:after{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-radius: 50%;
+                border: 1px solid $bg;
+                animation: blink 1.25s infinite backwards ease-out;
+            }
+        }
+    }
+}
+
+@keyframes blink {
+    0%{
+        transform: scale(.75);
+        opacity: .6;
+    }
+    100%{
+        transform: scale(2.25);
+        opacity: 0;
+    }
+}

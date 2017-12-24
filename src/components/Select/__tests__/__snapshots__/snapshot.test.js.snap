@@ -1,0 +1,1017 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`=====<Select>Snapshot</Select>===== Default props 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {},
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "class": "cmr-select",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "cmr-select-wrapper",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-input",
+                  "placeholder": "请选择",
+                  "readonly": "",
+                  "type": "text",
+                },
+                "children": Array [],
+                "name": "input",
+                "next": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-triangle",
+                  },
+                  "children": Array [],
+                  "name": "span",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+              },
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-triangle",
+                },
+                "children": Array [],
+                "name": "span",
+                "next": null,
+                "parent": [Circular],
+                "prev": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-input",
+                    "placeholder": "请选择",
+                    "readonly": "",
+                    "type": "text",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                },
+                "type": "tag",
+              },
+            ],
+            "name": "div",
+            "next": Object {
+              "attribs": Object {
+                "class": "cmr-select-menu",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option1",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option2",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": Object {
+                      "attribs": Object {
+                        "class": "cmr-select-option",
+                      },
+                      "children": Array [
+                        Object {
+                          "data": "option3",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "li",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": [Circular],
+                      "type": "tag",
+                    },
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                  },
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                },
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option2",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option3",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                  },
+                  "parent": [Circular],
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option1",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                  },
+                  "type": "tag",
+                },
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option3",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option2",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": Object {
+                      "attribs": Object {
+                        "class": "cmr-select-option",
+                      },
+                      "children": Array [
+                        Object {
+                          "data": "option1",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "li",
+                      "next": [Circular],
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                    },
+                    "type": "tag",
+                  },
+                  "type": "tag",
+                },
+              ],
+              "name": "ul",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+            },
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+          },
+          Object {
+            "attribs": Object {
+              "class": "cmr-select-menu",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-option",
+                },
+                "children": Array [
+                  Object {
+                    "data": "option1",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "li",
+                "next": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option2",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option3",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                  },
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+              },
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-option",
+                },
+                "children": Array [
+                  Object {
+                    "data": "option2",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "li",
+                "next": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option3",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                },
+                "parent": [Circular],
+                "prev": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option1",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                },
+                "type": "tag",
+              },
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-option",
+                },
+                "children": Array [
+                  Object {
+                    "data": "option3",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "li",
+                "next": null,
+                "parent": [Circular],
+                "prev": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option2",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option1",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                  },
+                  "type": "tag",
+                },
+                "type": "tag",
+              },
+            ],
+            "name": "ul",
+            "next": null,
+            "parent": [Circular],
+            "prev": Object {
+              "attribs": Object {
+                "class": "cmr-select-wrapper",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-input",
+                    "placeholder": "请选择",
+                    "readonly": "",
+                    "type": "text",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "next": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-triangle",
+                    },
+                    "children": Array [],
+                    "name": "span",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                  },
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                },
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-triangle",
+                  },
+                  "children": Array [],
+                  "name": "span",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-input",
+                      "placeholder": "请选择",
+                      "readonly": "",
+                      "type": "text",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                  },
+                  "type": "tag",
+                },
+              ],
+              "name": "div",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+            },
+            "type": "tag",
+          },
+        ],
+        "name": "div",
+        "next": null,
+        "parent": null,
+        "prev": null,
+        "root": [Circular],
+        "type": "tag",
+      },
+    ],
+    "name": "root",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "type": "root",
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xmlMode": false,
+  },
+}
+`;
+
+exports[`=====<Select>Snapshot</Select>===== Disabled select 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {},
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "class": "cmr-select cmr-select-disabled",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "cmr-select-wrapper",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-input",
+                  "placeholder": "请选择",
+                  "readonly": "",
+                  "type": "text",
+                },
+                "children": Array [],
+                "name": "input",
+                "next": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-triangle",
+                  },
+                  "children": Array [],
+                  "name": "span",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+              },
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-triangle",
+                },
+                "children": Array [],
+                "name": "span",
+                "next": null,
+                "parent": [Circular],
+                "prev": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-input",
+                    "placeholder": "请选择",
+                    "readonly": "",
+                    "type": "text",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                },
+                "type": "tag",
+              },
+            ],
+            "name": "div",
+            "next": Object {
+              "attribs": Object {
+                "class": "cmr-select-menu",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option1",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option2",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": Object {
+                      "attribs": Object {
+                        "class": "cmr-select-option",
+                      },
+                      "children": Array [
+                        Object {
+                          "data": "option3",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "li",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": [Circular],
+                      "type": "tag",
+                    },
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                  },
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                },
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option2",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option3",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                  },
+                  "parent": [Circular],
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option1",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                  },
+                  "type": "tag",
+                },
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option3",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option2",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": Object {
+                      "attribs": Object {
+                        "class": "cmr-select-option",
+                      },
+                      "children": Array [
+                        Object {
+                          "data": "option1",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "li",
+                      "next": [Circular],
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                    },
+                    "type": "tag",
+                  },
+                  "type": "tag",
+                },
+              ],
+              "name": "ul",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+            },
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+          },
+          Object {
+            "attribs": Object {
+              "class": "cmr-select-menu",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-option",
+                },
+                "children": Array [
+                  Object {
+                    "data": "option1",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "li",
+                "next": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option2",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option3",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                  },
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+              },
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-option",
+                },
+                "children": Array [
+                  Object {
+                    "data": "option2",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "li",
+                "next": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option3",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                },
+                "parent": [Circular],
+                "prev": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option1",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                },
+                "type": "tag",
+              },
+              Object {
+                "attribs": Object {
+                  "class": "cmr-select-option",
+                },
+                "children": Array [
+                  Object {
+                    "data": "option3",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "li",
+                "next": null,
+                "parent": [Circular],
+                "prev": Object {
+                  "attribs": Object {
+                    "class": "cmr-select-option",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "option2",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "li",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-option",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "option1",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "li",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                  },
+                  "type": "tag",
+                },
+                "type": "tag",
+              },
+            ],
+            "name": "ul",
+            "next": null,
+            "parent": [Circular],
+            "prev": Object {
+              "attribs": Object {
+                "class": "cmr-select-wrapper",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-input",
+                    "placeholder": "请选择",
+                    "readonly": "",
+                    "type": "text",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "next": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-triangle",
+                    },
+                    "children": Array [],
+                    "name": "span",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                  },
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                },
+                Object {
+                  "attribs": Object {
+                    "class": "cmr-select-triangle",
+                  },
+                  "children": Array [],
+                  "name": "span",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "cmr-select-input",
+                      "placeholder": "请选择",
+                      "readonly": "",
+                      "type": "text",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                  },
+                  "type": "tag",
+                },
+              ],
+              "name": "div",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+            },
+            "type": "tag",
+          },
+        ],
+        "name": "div",
+        "next": null,
+        "parent": null,
+        "prev": null,
+        "root": [Circular],
+        "type": "tag",
+      },
+    ],
+    "name": "root",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "type": "root",
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xmlMode": false,
+  },
+}
+`;

@@ -1,0 +1,11 @@
+@import './base.scss';
+
+$ani: #{$class-prefix}-animation;
+
+.#{$ani}{
+    &-collapse{
+        &-active{
+            transition: .2s height, .2s opacity;            
+        }
+    }
+}

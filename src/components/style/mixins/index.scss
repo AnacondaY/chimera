@@ -1,0 +1,29 @@
+@mixin triangle-generator($bg, $length,$bottom, $oritation: 'left'){
+    height: 0;
+    width: 0;
+    @if($oritation == 'left'){
+        border: {
+            top: $length solid transparent;
+            bottom: $length solid transparent;
+            right: $bottom solid $bg;
+        }
+    }@else if($oritation == 'right'){
+        border: {
+            top: $length solid transparent;
+            bottom: $length solid transparent;
+            left: $bottom solid $bg;
+        }
+    }@else if($oritation == 'up'){
+        border: {
+            left: $length solid transparent;
+            right: $length solid transparent;
+            bottom: $bottom solid $bg;
+        }
+    }@else{
+        border: {
+            left: $length solid transparent;
+            right: $length solid transparent;
+            top: $bottom solid $bg;
+        }
+    }
+}

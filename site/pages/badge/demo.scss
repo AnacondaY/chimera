@@ -1,0 +1,15 @@
+.demo-badge{
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255, .5);
+    border-radius: 4px;
+    &-list{
+        .cmr-badge{
+            margin-right: 16px;
+        }
+    }
+    &-icon{
+        font-size: 24px;
+        color: #fff;
+    }
+}

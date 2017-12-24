@@ -1,0 +1,125 @@
+@import '../../style/main/base.scss';
+@import '../../style/theme/default.scss';
+@import './mixin.scss';
+
+$step: #{$class-prefix}-step;
+$steps: #{$class-prefix}-steps;
+$line: #{$step}-line;
+
+@mixin line-generator($type, $theme, $mode: 'horizontal'){
+    &-#{$type}{
+        .#{$line}-inner{
+            &::after{
+                @if($mode == 'horizontal'){
+                    width: 100%;
+                }@else{
+                    height: 100%;
+                }
+                background: $theme;                
+            }
+        }  
+    }
+}
+
+.#{$step}{
+    position: relative;
+    @include step-generator($step, $text-primary);
+    &-processing{
+        @include step-generator($step, $primary);
+    }
+    &-success{
+        @include step-generator($step, $success);
+    }
+    &-error{
+        @include step-generator($step, $error);
+    }
+    &-icon{
+        vertical-align: top;
+        display: inline-block;
+        .#{$class-prefix}-icon{
+            font-size: 24px;
+        }
+        &-circle{
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            display: inline-block;
+            background: $text-primary;
+            font-size: 14px;
+            margin: 0 auto;
+            color: $default;
+        }
+        margin-right: 8px;
+    }
+    &-body{
+        display: inline-block;
+    }
+    &-title{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+    } 
+    &-description{
+        font-size: 12px;
+        margin: 0;
+    }
+    &-line{
+        position: absolute;        
+        box-sizing: border-box;
+        &-inner{     
+            background: $text-primary;
+            &::after{
+                content: '';
+                display: block;
+                transition: .5s ease-out;                    
+            }
+        }
+    }
+}
+
+.#{$steps}{
+    &-horizontal{
+        .#{$step}{
+            display: inline-block;
+        }
+        .#{$line}{
+            width: 100%;
+            left: 0;
+            top:14px;
+            height: 1px;
+            &-inner{
+                height: 100%;
+                margin: 0 8px;
+                &::after{
+                    height: 100%;
+                    width: 0;
+                }
+            }
+            @include line-generator('processing', $primary);
+            @include line-generator('error',$error);
+            @include line-generator('success', $success);
+        }
+    }
+    &-vertical{
+        .#{$step}{
+            display: block;
+        }
+        .#{$line}{
+            top:0;
+            height: 100%;
+            width: 100%;
+            &-inner{
+                width: 1px;
+                &::after{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            @include line-generator('processing', $primary, 'vertical');
+            @include line-generator('error',$error, 'vertical');
+            @include line-generator('success', $success, 'vertical');
+        }
+    }
+}

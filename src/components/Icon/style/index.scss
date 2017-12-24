@@ -1,0 +1,147 @@
+@import '../../style/main/base.scss';
+@import './mixin.scss';
+$icon:#{$class-prefix}-icon;
+$icon-url: '../../../assets/';
+
+@font-face {
+    font-family: 'iconfont';  /* project id 414756 */
+    src: url('//at.alicdn.com/t/font_414756_3a8bdydo1j8dj9k9.eot');
+    src: url('//at.alicdn.com/t/font_414756_3a8bdydo1j8dj9k9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_414756_3a8bdydo1j8dj9k9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_414756_3a8bdydo1j8dj9k9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_414756_3a8bdydo1j8dj9k9.svg#iconfont') format('svg');
+}
+
+@keyframes rotating{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.#{$icon} {
+    line-height: 1;
+    font-style: normal;
+    &-mail {
+        @include icon-generator('\e6df');
+    }
+    &-edit{
+        @include icon-generator('\e60e');
+    }
+    &-search {
+        @include icon-generator('\e603');
+    }
+    &-time {
+        @include icon-generator('\e708');
+    }
+    &-calendar {
+        @include icon-generator('\e613');
+    }
+    &-user {
+        @include icon-generator('\e90e');
+    }
+    &-trash {
+        @include icon-generator('\e620');
+    }
+    &-bars {
+        @include icon-generator('\e60d');
+    }
+    &-plus {
+        @include icon-generator('\e60f');
+    }
+    &-minus {
+        @include icon-generator('\e862');
+    }
+    &-success {
+        @include icon-generator('\e62a');
+    }
+    &-warning{
+        @include icon-generator('\e6ba');
+    }
+    &-error {
+        @include icon-generator('\e693');
+    }
+    &-loading {
+        @include icon-generator('\eb0f');
+        &:before{
+            display: inline-block;
+            animation: rotating 1s linear infinite;
+        }
+    }
+    &-lock {
+        @include icon-generator('\e6d2');
+    }
+    &-eye {
+        @include icon-generator('\e637');
+    }
+    &-arrow-left{
+        @include icon-generator('\e62b');
+    }
+    &-arrow-right{
+        @include icon-generator('\e611');
+    }
+    &-arrow-up{
+        @include icon-generator('\e600');
+    }
+    &-arrow-down{
+        @include icon-generator('\e604');
+    }
+    &-double-arrow-left{
+        @include icon-generator('\e610');
+    }
+    &-double-arrow-right{
+        @include icon-generator('\e612');
+    }
+    &-share{
+        @include icon-generator('\e602');
+    }
+    &-setting{
+        @include icon-generator('\e649');
+    }
+    &-more{
+        @include icon-generator('\e609');
+    }
+    &-star-on{
+        @include icon-generator('\e605');
+    }
+    &-star-off{
+        @include icon-generator('\e60c');
+    }
+    &-location{
+        @include icon-generator('\e629');
+    }
+    &-picture{
+        @include icon-generator('\e68a');
+    }
+    &-caret-up{
+        @include icon-generator('\e631');
+    }
+    &-caret-down{
+        @include icon-generator('\e62f');
+    }
+    &-close{
+        @include icon-generator('\e63c');
+    }
+    &-correct{
+        @include icon-generator('\e652');
+    }
+    &-sort{
+        @include icon-generator('\e630');
+    }
+    &-filter{
+        @include icon-generator('\e74d');
+    }
+    &-upload{
+        @include icon-generator('\e96a');
+    }
+    &-download{
+        @include icon-generator('\e8c3');
+    }
+    &-document{
+        @include icon-generator('\eabc');
+    }
+    &-math{
+        @include icon-generator('\e670');
+    }
+}

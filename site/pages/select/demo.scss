@@ -1,0 +1,31 @@
+.demo-select{
+    width: 240px;
+    display: block;
+    &:not(:last-of-type){
+        margin-bottom: 12px;
+    }    
+    &-list{
+        display: block;
+        .cmr-select{
+            margin-bottom: 12px;
+        }
+    }
+}
+.demo-option{
+    &::before{
+        content: '';
+        display: table;
+    }
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    &-main{
+        font-weight: 600;
+    }
+    &-sub{
+        float: right;
+        color: #d0d0d0;
+    }
+}
