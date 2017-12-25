@@ -6,7 +6,7 @@ const { SITE, NODE_MODULES, SRC } = require('./config');
 module.exports = {
     entry:{
         vendor: ['react', 'react-dom', 'classnames'],
-        main: resolve(__dirname, '../main.js')
+        app: '../main.js'
     },
     output:{
         path: resolve(__dirname, '../dist'),
