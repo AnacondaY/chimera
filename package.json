@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --history-api-fallback --open",
     "site": "cd ./site/config && node dev.server",
-    "site:build": "cd ./site/config && webpack --config dev.conf.js --progress",
+    "site:build": "cd ./site/config && webpack --config prod.conf.js --progress",
     "test": "jest",
     "build": "./scripts/build.sh"
   },
@@ -33,6 +33,7 @@
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^7.0.1",
     "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^0.11.2",
     "glob": "^7.1.2",
     "gulp": "^3.9.1",
@@ -57,13 +58,14 @@
     "regenerator-runtime": "^0.11.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^1.1.4",
     "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.4.5",
     "webpack-hot-middleware": "^2.20.0",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",

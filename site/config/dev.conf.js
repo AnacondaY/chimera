@@ -29,14 +29,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.scss$/,
-            use: ['style-loader', 'css-loader', 'sass-loader', {
-                loader: 'style-variables-loader',
-                options: {
-                    variables: {
-                        'highlight': '#000'
-                    }
-                }
-            }],
+            use: ['style-loader', 'css-loader', 'sass-loader'],
             exclude: /node_modules/
         }, {
             test: /\.css$/,

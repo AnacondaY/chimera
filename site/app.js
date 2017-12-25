@@ -16,8 +16,7 @@ export default class App extends React.PureComponent{
         super(props);
         this.state = {
             locale: 'zh-CN',
-            mainActive: 'main-0',
-            sideHash: 'side-0',
+            hash: 'quick-start',
             searchContent: ''
         };
         this.handleSearch = this.handleSearch.bind(this);
@@ -28,7 +27,7 @@ export default class App extends React.PureComponent{
         let hash = window.location.hash.split('/');
         hash = hash.length > 1 ? hash[1] : hash[0];
         this.setState({
-            sideHash: hash
+            hash
         });
         this.importPage(hash)
             .then(Page => {
@@ -60,7 +59,7 @@ export default class App extends React.PureComponent{
     }
 
     handleSearchChange(hash: String){
-        window.location.href = `/#/${hash}`;
+        window.location.href = `${window.location.pathname}/#/${hash}`;
     }
 
     changeLocale(lang: String){
@@ -84,7 +83,7 @@ export default class App extends React.PureComponent{
     }
 
     render(){
-        const { locale, sideHash } = this.state;
+        const { locale, hash } = this.state;
         return (
             <div className="app">
                 <div className="app-header">
@@ -137,9 +136,9 @@ export default class App extends React.PureComponent{
                                         if(!item.children){
                                             return (
                                                 <li key={`demo-nav-item-${index}`} className={cx('app-aside-nav-item', {
-                                                    'app-aside-nav-item-active': sideHash === item['hash']
+                                                    'app-aside-nav-item-active': hash === item['hash']
                                                 })}>
-                                                    <a href={`/#/${item['hash']}`}>{item[locale]}</a>
+                                                    <a href={`#/${item['hash']}`}>{item[locale]}</a>
                                                 </li>
                                             );
                                         }else{
@@ -155,9 +154,9 @@ export default class App extends React.PureComponent{
                                                                         {components.children.map((c, i) => {
                                                                             return (
                                                                                 <li key={`demo-nav-group-item-${i}`} className={cx('app-aside-nav-item', {
-                                                                                    'app-aside-nav-item-active': sideHash === c['hash']
+                                                                                    'app-aside-nav-item-active': hash === c['hash']
                                                                                 })}>
-                                                                                    <a href={`/#/${c['hash']}`}>{c[locale]}</a>
+                                                                                    <a href={`#/${c['hash']}`}>{c[locale]}</a>
                                                                                 </li>                                                            
                                                                             );
                                                                         })}

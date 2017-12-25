@@ -59,7 +59,7 @@ In your ```.babelrc``` file:
         //other babel options
         "plugins": [
             ["chimeraui", { 
-                "style": "sass",
+                "style": "scss",
                 "libDirectory": "lib"
             }]
         ]
@@ -72,5 +72,5 @@ After babel configuration, the syntax ```import { Button } from 'chimera-ui'``` 
     import { Button } from 'chimera-ui';
     //after babel transformation
     import Button from 'chimera-ui/lib/button';
-    import Button from 'chimera-ui/lib/button/style'
+    import Button from 'chimera-ui/lib/button/style/index.scss'
 ```

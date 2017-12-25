@@ -60,7 +60,7 @@ Chimera提供已经构建完成的脚本、样式及对应的压缩版本, 可�
         //other babel options
         "plugins": [
             ["chimeraui", { 
-                "style": "sass",
+                "style": "scss",
                 "libDirectory": "lib"
             }]
         ]
@@ -73,5 +73,5 @@ Chimera提供已经构建完成的脚本、样式及对应的压缩版本, 可�
     import { Button } from 'chimera-ui';
     //经过babel转译后
     import Button from 'chimera-ui/lib/button';
-    import Button from 'chimera-ui/lib/button/style'
+    import Button from 'chimera-ui/lib/button/style/index.scss'
 ```
