@@ -1,5 +1,5 @@
 import React, { Children, cloneElement, ReactElement, ReactNode, SyntheticEvent } from 'react';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import PropTypes from '../../base/prop-types';
 import BaseComponent from '../../base/BaseComponent';
 import { UP, DOWN, ENTER } from '../../base/utils/keyCode';

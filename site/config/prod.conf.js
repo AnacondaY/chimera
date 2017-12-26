@@ -4,7 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const HappyPack = require('happypack');
+const { SITE } = require('./config');
 
 module.exports = {
     entry: {
@@ -15,19 +18,19 @@ module.exports = {
             'classnames',
             'prop-types',
             'ulid',
-            'lodash',
             'components'
         ]
     },
     output: {
         path: resolve(__dirname, '../dist'),
-        filename: '[chunkhash:12].js',
+        filename: '[name].[chunkhash:8].js',
         publicPath: ''
     },
     resolve:{
         extensions:['*', '.js', '.jsx', '.scss', '.css'],
         alias:{
-            components: resolve(__dirname, '../../src/components')
+            'components': resolve(__dirname, '../../src/components'),
+            'ulid$': resolve(__dirname, '../../node_modules/ulid/lib/index.umd.js'),
         }
     },
     module: {
@@ -61,11 +64,12 @@ module.exports = {
         }]
     },
     plugins: [
+        new BundleAnalyzerPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new ExtractTextWebpackPlugin({
-            filename: '[chunkhash:8].css',
+            filename: '[name].[chunkhash:8].css',
         }),
         new HappyPack({
             id: 'style',
@@ -82,8 +86,16 @@ module.exports = {
             template:'../template.html'            
         }),
         new webpack.optimize.UglifyJsPlugin({
-            ecma: 7
+            compress: {
+                warnings: false
+            },
+            output: {
+                comments: false
+            },
+            sourceMap: false
         }),
-        new CleanWebpackPlugin('dist')
+        new CleanWebpackPlugin(resolve(__dirname, 'dist'), {
+            root: SITE
+        })
     ],
 };

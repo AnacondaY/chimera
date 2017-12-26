@@ -1,7 +1,7 @@
 import React, { createElement } from 'react';
 import BaseComponent from '../../base/BaseComponent';
 import { propTypes, defaultProps } from './define';
-import { isObject } from 'lodash';
+import isObject  from 'lodash/isObject';
 
 export default class IFrameUploader extends BaseComponent {
 

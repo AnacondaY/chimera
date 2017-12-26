@@ -1,6 +1,6 @@
 import React, { createElement, isValidElement } from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
-import { isObject } from 'lodash';
+import isObject from 'lodash/isObject';
 import Message from './Message';
 
 const DEFAULT = {

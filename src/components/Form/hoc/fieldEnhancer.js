@@ -1,5 +1,5 @@
 import React, { cloneElement, createElement } from 'react';
-import { noop } from 'lodash';
+import noop from 'lodash/noop';
 import BaseComponent from '../../../base/BaseComponent';
 import PropTypes from '../../../base/prop-types';
 

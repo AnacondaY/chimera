@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import PropTypes from '../../../base/prop-types';
-import { chunk } from 'lodash';
+import chunk  from 'lodash/chunk';
 import { parseDate } from '../utils';
 import BaseComponent from '../../../base/BaseComponent';
 import { YEAR_TABLE_COL_COUNT, YEAR_TABLE_ROW_COUNT } from '../constants';

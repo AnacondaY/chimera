@@ -1,8 +1,12 @@
 import marked from 'marked';
-import highlight from 'highlight.js';
+import hljs from 'highlight.js/lib/highlight';
 import 'highlight.js/styles/atom-one-dark';
 import './renderer.scss';
+
 const renderer = new marked.Renderer();
+hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
+hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
+
 renderer.heading = (text, level) => {
     return `<h${level} class="renderer-title-${level}">${text}</h${level}>`;
 };
@@ -25,7 +29,7 @@ renderer.strong = text => `<b class="renderer-strong">${text}</b>`;
 marked.setOptions({
     renderer,
     highlight: function (code) {
-        return highlight.highlightAuto(code).value;
+        return hljs.highlightAuto(code).value;
     }
 });
 

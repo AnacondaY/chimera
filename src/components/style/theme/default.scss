@@ -1,30 +1,30 @@
-$cyan: #04d8b5;
-$carbon: #2b2f42;
-$skyblue: #1b98f3;
-$red: #f05a5a;
-$orange: #ff855d;
-$lightblue: #22ccc2;
-$purple: #a483ee;
-$gold: #fac525;
-$inverse: #000;
-$default: #fff;
-$font: #757575;
-$title: #d0d0d0;
+$cyan: #04d8b5  !default;
+$carbon: #2b2f42 !default;
+$skyblue: #1b98f3 !default;
+$red: #f05a5a !default;
+$orange: #ff855d !default;
+$lightblue: #22ccc2 !default;
+$purple: #a483ee !default;
+$gold: #fac525 !default;
+$inverse: #000 !default;
+$default: #fff !default;
+$font: #757575 !default;
+$title: #d0d0d0 !default;
 
-$highlight: #04d8b5;
-$primary: #1b98f3;
-$error: #f05a5a;
-$info: #22ccc2;
-$warning: #fac525;
-$success: #20b96d;
-$disabled: #9b9a9a;
-$boundary: #a6a6a6;
-$text-primary: #d0d0d0;
-$text-secondary: #d5d5d5;
-$control-background: rgba($inverse, .25);
-$popover-background-primary: rgba($inverse, .78);
-$popover-background-secondary: rgba($inverse, .85);
-$popover-shadow: rgba($inverse, .25);
+$highlight: #04d8b5 !default;
+$primary: #1b98f3 !default;
+$error: #f05a5a !default;
+$info: #22ccc2 !default;
+$warning: #fac525 !default;
+$success: #20b96d !default;
+$disabled: #9b9a9a !default;
+$boundary: #a6a6a6 !default;
+$text-primary: #d0d0d0 !default;
+$text-secondary: #d5d5d5 !default;
+$control-background: rgba($inverse, .25) !default;
+$popover-background-primary: rgba($inverse, .78) !default;
+$popover-background-secondary: rgba($inverse, .85) !default;
+$popover-shadow: rgba($inverse, .25) !default;
 
 
 //form

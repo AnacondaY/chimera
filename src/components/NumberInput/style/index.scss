@@ -8,6 +8,13 @@ $input: #{$class-prefix}-input;
     &-number{
         position: relative;
         @extend %clearfix;
+        .#{$input}-origin{
+            &:hover,
+            &:focus{
+                border-color: $highlight;
+                box-shadow: 0 0 6px rgba($highlight, .35);
+            }
+        }
     }
     &-disabled{
         .#{$input}-control-button{

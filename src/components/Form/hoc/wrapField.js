@@ -1,6 +1,6 @@
 import React from 'react';
 import Field from '../Field';
-import { isEqual } from 'lodash';
+import isEqual from 'lodash/isEqual';
 import BaseComponent from '../../../base/BaseComponent';
 import PropTypes from '../../../base/prop-types';
 

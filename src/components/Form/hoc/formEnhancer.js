@@ -1,7 +1,8 @@
 import React, { cloneElement } from 'react';
 import { findDOMNode } from 'react-dom';
 import Validator from 'validate-promisify';
-import { isEqual, noop } from 'lodash';
+import isEqual from 'lodash/isEqual';
+import noop from 'lodash/noop';
 import PropTypes from '../../../base/prop-types';
 
 

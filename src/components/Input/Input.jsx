@@ -1,5 +1,5 @@
 import React from 'react';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import Icon from '../Icon';
 import PropTypes from '../../base/prop-types';
 import BaseComponent from '../../base/BaseComponent';
