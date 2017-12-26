@@ -1,6 +1,6 @@
 {
-  "name": "chimera",
-  "version": "1.0.0",
+  "name": "chimera-ui",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
@@ -82,5 +82,10 @@
     "ulid": "^2.2.1",
     "validate-promisify": "0.0.7",
     "warning": "^3.0.0"
+  },
+  "jest":{
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   }
 }

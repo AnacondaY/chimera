@@ -15,6 +15,6 @@ module.exports = {
         '\\.(css|scss)$': 'identity-obj-proxy',
     },
     transform: {
-        '^.\\.jsx?$': 'babel-jest'
+        '^.+\\.jsx?$': 'babel-jest'
     }
 };
