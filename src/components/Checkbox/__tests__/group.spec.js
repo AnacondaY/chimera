@@ -25,8 +25,8 @@ describe('=== Checkbox Group ===', () => {
                 <Checkbox value="3">Acuteness</Checkbox>
             </Checkbox.Group>
         );
-        group.childAt(0).find('input').simulate('change');
-        expect(callback).toBeCalled();
+        group.childAt(0).find('input').simulate('change', { target: { checked: true } });
+        expect(callback).toBeCalledWith(['1']);
     });
-
+    
 });

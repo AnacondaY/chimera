@@ -24,7 +24,7 @@ describe('=== Checkbox ===', () => {
     test('with callback \'onChange\'', () => {
         const callback = jest.fn();
         const checkbox = shallow(<Checkbox onChange={callback} />);
-        checkbox.find('input').simulate('change');
+        checkbox.find('input').simulate('change', {target: { checked: true }});
         expect(callback).toBeCalledWith(true); 
     });
 
