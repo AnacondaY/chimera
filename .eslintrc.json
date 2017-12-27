@@ -5,7 +5,7 @@
         "es6": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended", "plugin:jest/recommended"],
     "parser":"babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
@@ -15,6 +15,7 @@
         "sourceType": "module"
     },
     "plugins": [
+        "jest",
         "react"
     ],
     "rules": {
@@ -35,6 +36,11 @@
             "always"
         ],
         "no-unused-vars":"off",
-        "no-case-declarations": "off"
+        "no-case-declarations": "off",
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
     }
 }

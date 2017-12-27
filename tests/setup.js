@@ -1,6 +1,6 @@
 import React from 'react';
+import { findDOMNode } from 'react-dom';
 import { shallow, render, mount } from 'enzyme';
-import { create } from 'react-test-renderer';
 
 let target = !window ? global : window;
 const api = {
@@ -8,7 +8,7 @@ const api = {
     shallow, 
     render, 
     mount,
-    create
+    findDOMNode
 };
 
 for(const key in api){

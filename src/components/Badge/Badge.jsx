@@ -27,11 +27,14 @@ export default class Badge extends BaseComponent {
         if(number <= maximum){
             return number;
         }else{
-            if(typeof maxTemplate === 'function'){
-                return maxTemplate(number, maximum);
-            }else{
-                return `${maximum}+`;
+            if(maxTemplate){
+                if(typeof maxTemplate === 'function'){
+                    return maxTemplate(number, maximum);
+                }else{
+                    return maxTemplate;
+                }
             }
+            return `${maximum}+`;
         }
     }
 

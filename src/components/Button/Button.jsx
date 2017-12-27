@@ -7,7 +7,7 @@ export default class Button extends BaseComponent {
 
     static propTypes = {
         type: PropTypes.oneOf(['success', 'error', 'info', 'warning', 'primary', 'default']),
-        size: PropTypes.oneOfType(['large', 'middle', 'small']),
+        size: PropTypes.oneOf(['large', 'middle', 'small']),
         icon: PropTypes.string,
         loading: PropTypes.bool,
         htmlType: PropTypes.oneOf(['submit', 'reset', 'button']),
@@ -40,7 +40,7 @@ export default class Button extends BaseComponent {
             >
                 {loading && <Icon type="loading"/>}
                 {icon && !loading && <Icon type={icon} />}
-                <span>{children}</span>
+                {children}
             </button>
         );
 

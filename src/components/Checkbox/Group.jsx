@@ -27,7 +27,9 @@ export default class Group extends BaseComponent {
             return {
                 values
             };
-        }, () => this.props.onChange(this.state.values));
+        }, () => {
+            this.props.onChange(this.state.values);
+        });
     }
 
     render(){

@@ -33,6 +33,7 @@
     "enzyme": "^2.9.1",
     "enzyme-adapter-react-15": "^1.0.5",
     "eslint": "^3.19.0",
+    "eslint-plugin-jest": "^21.5.0",
     "eslint-plugin-react": "^7.0.1",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^2.1.2",
@@ -58,7 +59,7 @@
     "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^15.6.0",
     "react-hot-loader": "3.0.0-beta.0",
-    "react-test-renderer": "^15.5.0",
+    "react-test-renderer": "^15.6.2",
     "regenerator-runtime": "^0.11.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
@@ -82,10 +83,5 @@
     "ulid": "^2.2.1",
     "validate-promisify": "0.0.7",
     "warning": "^3.0.0"
-  },
-  "jest":{
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
   }
 }
