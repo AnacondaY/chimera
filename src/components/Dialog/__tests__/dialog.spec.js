@@ -12,7 +12,7 @@ describe('=== Dialog ===', () => {
         }
         render(){
             return (
-                <Dialog/>
+                <Dialog {...this.props} visible={this.state.visible} />
             );
         }
     }
@@ -33,31 +33,35 @@ describe('=== Dialog ===', () => {
 
     beforeEach(() => {
         dialog = mount(
-            <Dialog>
+            <DialogTester>
                 xxxx
-            </Dialog>
+            </DialogTester>
         );
-        show();
+        show();                
     });
 
     afterEach(() => {
         hide();
     });  
 
-    // test('open correctly', () => {
-    //     expect(document.querySelector('.cmr-dialog')).not.toBeNull();
-    // });
-
-    test('with prop \'closable\'', () => {
-        dialog.setState({
-            title: 'xxx'
-        });
-        expect(dialog.instance().pop.node.querySelector('.cmr-dialog-body')).not.toBeNull();
+    test('open correctly', () => {
+        expect(document.querySelector('.cmr-dialog')).not.toBeNull();
     });
 
-    // test('with prop \'footer\'', () => {
-    //     const dialog = mount(<Dialog footer="xxxx" />);
-    //     expect(dialog.find('.cmr-dialog').hasClass('cmr-dialog-has-footer')).toBeTruthy();
-    // });
+    test('without prop \'closable\'', () => {
+        dialog.setProps({
+            closable: false
+        });
+        expect(document.querySelector('.cmr-dialog-close')).toBeNull();
+    });
+
+    test('esc to close', () => {
+        const e = new KeyboardEvent('keydown', {
+            which: 27            
+        });
+        document.dispatchEvent(e);
+        expect(document.querySelector('.cmr-dialog')).toBeNull();
+    });
+
 
 });

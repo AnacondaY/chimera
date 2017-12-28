@@ -142,7 +142,7 @@ export default class Dropdown extends BaseComponent {
             return {
                 visible: !visible
             };
-        });
+        }, () => this.props.onVisibleChange(this.state.visible));
     }
 
     componentDidMount() {
@@ -153,7 +153,7 @@ export default class Dropdown extends BaseComponent {
     }
 
     render(){
-        const { children, placement, trigger, menu } = this.props;
+        const { children, placement, trigger, menu, onItemClick } = this.props;
         const visible = this.state.visible;
         const eventHandlers = {};
         const menuHandlers = {};
@@ -185,7 +185,10 @@ export default class Dropdown extends BaseComponent {
                             ...menu.props,
                             ref: 'menu',
                             placement,
-                            onItemClick: this.hide,
+                            onItemClick: action => {
+                                onItemClick(action);
+                                this.hide();
+                            },
                             ...menuHandlers
                         })}
                     </Animate>

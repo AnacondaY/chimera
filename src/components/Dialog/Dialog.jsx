@@ -39,6 +39,7 @@ export default class Dialog extends BaseComponent {
     }
 
     handleModalClose(evt){
+        console.log(evt);
         if(!this.refs.main.contains(evt.target)){
             this.close();
         }
