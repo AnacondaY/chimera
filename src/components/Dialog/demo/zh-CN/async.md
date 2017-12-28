@@ -46,7 +46,8 @@
                         title={'Dialog标题'} 
                         footer={
                             <div className="demo-dialog-footer">
-                                <Button loading={fetching} type="primary" onClick={this.submit}>提交</Button>                            </div>
+                                <Button loading={fetching} type="primary" onClick={this.submit}>提交</Button>                            
+                            </div>
                         }
                     >
                         <p>Dialog content ...</p>

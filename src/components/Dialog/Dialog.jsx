@@ -70,6 +70,7 @@ export default class Dialog extends BaseComponent {
                 visible={visible}
                 escToClose
                 onClose={this.close}
+                ref={pop => this.pop = pop}
             >
                 <div className={this.classNames({
                     'cmr-dialog': true,

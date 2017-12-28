@@ -99,8 +99,7 @@ export default class DatePicker extends BaseComponent {
     }
 
     handleOpen(portalNode: HTMLElement){
-        const inputDOM:HTMLInputElement = findDOMNode(this.refs.input);
-        const { offsetLeft, offsetTop, offsetHeight } = getOffset(inputDOM);
+        const { offsetLeft, offsetTop, offsetHeight } = getOffset(this.input);
         portalNode.childNodes[0].style.left = offsetLeft;
         portalNode.childNodes[0].style.top = offsetTop + offsetHeight + 4;
     }
@@ -119,6 +118,11 @@ export default class DatePicker extends BaseComponent {
             });
         });
     }
+
+    componentDidMount() {
+        this.input = findDOMNode(this.refs.input);
+    }
+    
 
     render() {
         const { disabled, size, placeholder, mode, disableDate, range, onChange, onBlur, onFocus, cmrLocale } = this.props;
@@ -143,6 +147,7 @@ export default class DatePicker extends BaseComponent {
                     outsideClickToClose 
                     onOpen={this.handleOpen} 
                     beforeClose={this.beforeClose}
+                    ref={pop => this.pop = pop}
                 >
                     <Animate active={visible} effect="collapse">
                         {range ? 
