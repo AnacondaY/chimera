@@ -27,7 +27,7 @@ export default class Sider extends BaseComponent {
     render(){
         const { width, children, collapsed, collapsible } = this.props;
         return (
-            <div className="cmr-layout-sider" style={this.styles({
+            <div className={this.classNames('cmr-layout-sider')} style={this.styles({
                 width: !collapsed ? width : 0 
             })}>{children}</div>
         );

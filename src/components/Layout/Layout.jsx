@@ -2,20 +2,17 @@ import React, { Children } from 'react';
 import PropTypes from '../../base/prop-types';
 import BaseComponent from '../../base/BaseComponent';
 
-function Fundation({baseClassName, className, style = {}, children}){
-    return (
-        <div 
-            className={[baseClassName, className].join(' ')}
-            style={style}
-        >
-            {children}
-        </div>
-    );
-}
+const getClassList = (selfClass, className) => {
+    const classList = [selfClass];
+    if(className){
+        classList.push(className);
+    }
+    return classList;
+};
 
-const Layout = ({children, className}) => {
+const Layout = ({children, className, style}) => {
     let hasSider = false;
-    const classList = ['cmr-layout', className];
+    const classList = getClassList('cmr-layout', className);
     Children.forEach(children, child => {
         if(child.type.__LAYOUT_SIDER__){
             hasSider = true;
@@ -25,22 +22,25 @@ const Layout = ({children, className}) => {
         classList.push('cmr-layout-has-sider');
     }
     return (
-        <div className={classList.join(' ')}>
+        <div className={classList.join(' ')} style={style}>
             {children}
         </div>
     );
 };
 
-export const Header = ({children}) => {
-    return <div className="cmr-layout-header">{children}</div>;
+export const Header = ({children, className, style}) => {
+    const classList = getClassList('cmr-layout-header', className);
+    return <div className={classList.join(' ')} style={style}>{children}</div>;
 };
 
-export const Footer = ({children}) => {
-    return <div className="cmr-layout-footer">{children}</div>;
+export const Footer = ({children, className, style}) => {
+    const classList = getClassList('cmr-layout-footer', className);
+    return <div className={classList.join(' ')} style={style}>{children}</div>;
 };
 
-export const Content = ({children}) => {
-    return <div className="cmr-layout-content">{children}</div>;
+export const Content = ({children, className, style}) => {
+    const classList = getClassList('cmr-layout-content', className);
+    return <div className={classList.join(' ')} style={style}>{children}</div>;
 };
 
 export default Layout;

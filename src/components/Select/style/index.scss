@@ -31,7 +31,7 @@ $sizes: 'large' 'middle' 'small';
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
-    width: 100%;
+    min-width: 36px;
     font-size: 14px;
     
     @each $s in $sizes{
