@@ -48,6 +48,7 @@ export default function message(opts: Object| String){
     });
 
     render(msg, container);
+    return showdown;
 }
 
 ['success', 'info', 'error', 'warning'].forEach(type => {
@@ -59,7 +60,7 @@ export default function message(opts: Object| String){
             };
         }        
         opts['type'] = type;
-        message(opts);
+        return message(opts);
     };
 });
 

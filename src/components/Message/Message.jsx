@@ -58,6 +58,10 @@ export default class Message extends BaseComponent {
         }, this.startTimer);
     }    
 
+    componentWillUnmount(){
+        clearTimeout(this.timer);
+    }
+
     render(){
         const { message, duration, type, offset } = this.props;
         return (

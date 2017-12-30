@@ -231,8 +231,10 @@ export default class Slider extends BaseComponent {
                                     return null;
                                 }
                                 return (
-                                    <span className="cmr-slider-tick" key={`cmr-slider-tick-${i}`} 
-                                        style={{[!this.isVertical ? 'left': 'bottom']: `${position}%`}} />
+                                    <span className="cmr-slider-tick" 
+                                        key={`cmr-slider-tick-${i}`} 
+                                        style={{[!this.isVertical ? 'left': 'bottom']: `${position}%`}} 
+                                    />
                                 );    
                             })
                         }

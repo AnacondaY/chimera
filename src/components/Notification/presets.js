@@ -33,23 +33,26 @@ export default function notification(opts: Object = {}){
     //初始化计算top
     opts.top = notices.length ? notices.length * (notices[0].offsetHeight + opts.gap) + opts.offset : opts.offset; 
 
+    const unmount = () => {
+        unmountComponentAtNode(container);
+        document.body.removeChild(container);
+        const notices = document.querySelectorAll('.cmr-notice');
+        //节点删除后重新计算位置
+        Array.prototype.forEach.call(notices, (n, i) => {
+            n.style.top = `${(n.offsetHeight + opts.gap) * i + opts.offset}px`;
+        });
+        if(typeof opts.onClose === 'function'){
+            opts.onClose();
+        }
+    };
+
     const notice = createElement(Notice, Object.assign({}, {
-        onUnmount(){
-            unmountComponentAtNode(container);
-            document.body.removeChild(container);
-            const notices = document.querySelectorAll('.cmr-notice');
-            //节点删除后重新计算位置
-            Array.prototype.forEach.call(notices, (n, i) => {
-                n.style.top = `${(n.offsetHeight + opts.gap) * i + opts.offset}px`;
-            });
-            if(typeof opts.onClose === 'function'){
-                opts.onClose();
-            }
-        },
+        onUnmount: unmount,
         ...opts
     }));
 
     render(notice, container);
+    return unmount;
 }
 
 ['success', 'error', 'info', 'warning'].forEach(type => {
