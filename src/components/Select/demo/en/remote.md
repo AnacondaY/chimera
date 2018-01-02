@@ -79,7 +79,7 @@
         render(){
             const { options, fetching } = this.state;
             return (
-                <Select onSearch={val => this.handleSearch(val)} placeholder="Remote search"
+                <Select onSearch={val => this.handleSearch(val)} placeholder="Remote search" style={{width: '100%'}}
                     remote filterable multiple fetching={fetching}
                 > 
                     {options.map((op, i) => {

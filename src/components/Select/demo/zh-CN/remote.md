@@ -80,7 +80,7 @@
             const { options, fetching } = this.state;
             return (
                 <Select onSearch={val => this.handleSearch(val)} placeholder="远程搜索"
-                    remote filterable multiple fetching={fetching}
+                    remote filterable multiple fetching={fetching} style={{width: '100%'}}
                 > 
                     {options.map((op, i) => {
                         return <Select.Option key={op.id} value={op.id} label={op.name} />

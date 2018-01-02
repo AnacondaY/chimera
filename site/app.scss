@@ -42,6 +42,7 @@ $title: #d0d0d0;
             padding-left: 12px;
             border-left: 2px solid $title;
             .cmr-select{
+                width: 240px;
                 &-box{
                     background: transparent;
                     border-color: transparent;
@@ -54,7 +55,7 @@ $title: #d0d0d0;
                 &-arrow{
                     display: none;
                 }
-                &-opened{
+                &-open{
                     .cmr-select-box{
                         border-color: transparent;
                         box-shadow: none;

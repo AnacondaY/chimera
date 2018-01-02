@@ -59,7 +59,10 @@ export default class App extends React.PureComponent{
     }
 
     handleSearchChange(hash: String){
-        window.location.href = `${window.location.pathname}/#/${hash}`;
+        window.location.href = `${window.location.pathname}#/${hash}`;
+        this.setState({
+            searchContent: ''
+        });
     }
 
     changeLocale(lang: String){
@@ -83,7 +86,11 @@ export default class App extends React.PureComponent{
     }
 
     render(){
-        const { locale, hash } = this.state;
+        const { locale, hash, searchContent } = this.state;
+        const options = asideMap[2].children.reduce((prevOpts, cur) => {
+            const filteredArr = cur.children.filter(item => item[locale].indexOf(searchContent) !== -1);
+            return prevOpts.concat(filteredArr);
+        }, []);
         return (
             <div className="app">
                 <div className="app-header">
@@ -96,19 +103,9 @@ export default class App extends React.PureComponent{
                                 onSearch={this.handleSearch}
                                 onChange={this.handleSearchChange}
                             >
-                                {asideMap[2].children.map((group, i) =>{
+                                {options.map((op, i) =>{
                                     return (
-                                        <Select.OptGroup key={`optgroup-${i}`} label={group.en}>
-                                            {group.children.map(op => {
-                                                return (
-                                                    <Select.Option value={op.hash} label={op['zh-CN']} key={op.hash}>
-                                                        <div className="app-header-search-option">
-                                                            <b>{op['zh-CN']}</b>
-                                                        </div>
-                                                    </Select.Option>
-                                                );
-                                            })}
-                                        </Select.OptGroup>
+                                        <Select.Option label={op[locale]} key={op.hash} value={op.hash}/>
                                     );
                                 })}
                             </Select>

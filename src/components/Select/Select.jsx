@@ -298,7 +298,7 @@ export default class Select extends BaseComponent {
                 'cmr-select-disabled': disabled,
                 'cmr-select-filterable': filterable,
                 [`cmr-select-${size}`]: true
-            })} ref="root">
+            })} style={this.styles()} ref="root">
                 <div className="cmr-select-box" 
                     tabIndex="-1" 
                     onClick={this.handleClick} 
@@ -316,6 +316,7 @@ export default class Select extends BaseComponent {
                                 readOnly={!filterable}
                                 ref={input => this.input = input}
                                 placeholder={selectedOptions.length === 0 ? placeholder : ''}
+                                style={{width: selectedOptions.length === 0 ? 'auto' : '1em'}}
                             />
                         }
                     </div>
@@ -330,12 +331,14 @@ export default class Select extends BaseComponent {
                             ref={input => this.input = input}
                         />
                     } 
-                    <span className="cmr-select-arrow">
-                        <Icon type="caret-down"/>
-                    </span>                   
+                    {!multiple && 
+                        <span className="cmr-select-arrow">
+                            <Icon type="caret-down"/>
+                        </span>
+                    }                   
                 </div>
                 <div className="cmr-select-menu-wrapper">
-                    <Animate active={opened} effect="collapse">
+                    <Animate active={opened} effect="collapse" initial={false}>
                         <ul 
                             className="cmr-select-menu" 
                             role="menu" 

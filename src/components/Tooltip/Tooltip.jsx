@@ -155,10 +155,6 @@ export default class Tooltip extends BaseComponent {
         }, () => this.props.onVisibleChange(this.state.visible));
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        this.props.onVisibleChange(this.state.visible);   
-    }
-
     handleOpen(main: HTMLElement){
         this.calcPosition(main);
     }
@@ -176,7 +172,6 @@ export default class Tooltip extends BaseComponent {
         const { children, content, trigger, placement } = this.props;
         let onlyChild = Children.only(children);
         const { visible, contentPosition } = this.state;
-
         let eventListener = {};
         if(trigger === 'hover'){
             eventListener = {

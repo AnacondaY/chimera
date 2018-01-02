@@ -5,7 +5,7 @@
         render(){
             return (
                 <div className="demo-select-list">
-                    <Select multiple size="large" placeholder="基础多选">
+                    <Select className="demo-select" multiple size="large" placeholder="基础多选">
                         <Select.Option value="1" label="Option1" />
                         <Select.Option value="2" label="Option2" />
                         <Select.Option value="3" label="Option3" />

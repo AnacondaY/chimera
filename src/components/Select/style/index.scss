@@ -7,19 +7,24 @@
 $select: #{$class-prefix}-select;
 $sizes: 'large' 'middle' 'small';
 
-@mixin size($height, $radius){
+@mixin size($height, $radius, $top){
     &.#{$select}{   
         .#{$select}-box{
             border-radius: 4px;    
             min-height: $height;
             line-height: $height; 
-        }   
+        }  
+        .#{$select}-wrapper{
+            line-height: $height;
+        } 
         .#{$select}-input{
             &-tag{
                 line-height: $height - 2px;
             }
         }
-
+        .#{$select}-arrow{
+            top: $top;
+        }
         .#{$select}-value{
             height: $height;
         }
@@ -31,14 +36,13 @@ $sizes: 'large' 'middle' 'small';
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
-    min-width: 36px;
     font-size: 14px;
     
     @each $s in $sizes{
         $index: index($sizes, $s);
         $inner: #{$select}-value-inner;
         &-#{$s}{
-            @include size(40 - $index * 4px, 12 - $index * 4px);
+            @include size(40 - $index * 4px, 12 - $index * 4px, 12 - $index * 2px);
             @if($s == 'small'){
                 font-size: 12px;
                  .#{$inner}{
@@ -76,7 +80,7 @@ $sizes: 'large' 'middle' 'small';
     }
 
     &-wrapper {
-        position: absolute;
+        position: relative;
         left: 0;
         top: 0;
         right: 0;
@@ -121,8 +125,9 @@ $sizes: 'large' 'middle' 'small';
     }
 
     &-arrow {
-        float: right;
-        margin-right: 4px;
+        position: absolute;
+        line-height: 1;
+        right: 4px;
         font-size: 16px;
         color: $text-primary;
         transition: transform .35s;
@@ -180,9 +185,11 @@ $sizes: 'large' 'middle' 'small';
             font-size: 14px;
             color: $text-primary;
             vertical-align: middle;
+            max-width: 100%;
         }
     }
     &-menu {
+        display: none;
         background-color: $popover-background-primary;
         margin-top: 4px;
         box-shadow: 2px 2px 8px rgba($inverse, .25);
