@@ -7,13 +7,12 @@ import './demo.scss';
 export default class DemoLayout extends React.PureComponent {
 
     render(){
+        const locale = this.props.locale;
         return (
-            <div>
-                <Statement componentName="Layout">
-                    <Block componentName="Layout" documentName="basic" />
-                    <Block componentName="Layout" documentName="nav" />
-                </Statement>
-            </div>
+            <Statement locale={locale} componentName="Layout">
+                <Block locale={locale} componentName="Layout" documentName="basic" />
+                <Block locale={locale} componentName="Layout" documentName="nav" />
+            </Statement>
         );
     }
 }

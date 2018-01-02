@@ -1,12 +1,12 @@
 ### 配合Navigation
+布局常常和导航结合使用。
 ```javascript
     class Demo extends React.Component {
-
         render(){
             const { Header, Sider, Content, Footer } = Layout;
             const { Item, Subnav, ItemGroup } = Navigation;
             return (
-                <Layout>
+                <Layout className="demo-layout">
                     <Header>
                         <Navigation>
                             <Item>导航1</Item>
@@ -25,7 +25,7 @@
                     </Header>
                     <Layout>
                         <Sider style={{height: 320}}>
-                            <Navigation mode="vertical">
+                            <Navigation mode="vertical" style={{height: '100%'}}>
                                 <Item>导航4</Item>
                                 <Subnav title="导航5">
                                     <Item>导航5-1</Item>
@@ -36,13 +36,14 @@
                             </Navigation>
                         </Sider>
                         <Content>
-                            Content
+                            <p style={{padding: '0 12px'}}>文章内容。。。</p>
                         </Content>
                     </Layout>
-                    <Footer style={{height: 120}}>Footer</Footer>
+                    <Footer className="demo-layout-footer">
+                        Copyright by AnacondaY
+                    </Footer>
                 </Layout>
             )
         }
-
     }
 ```

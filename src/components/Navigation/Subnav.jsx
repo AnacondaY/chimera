@@ -188,7 +188,7 @@ export default class Subnav extends BaseComponent {
                     </span>
                 </div>
                 {isVertical ? 
-                    <Animate active={opened} effect="collapse">
+                    <Animate initial={false} active={opened} effect="collapse">
                         {menu}
                     </Animate>: 
                     <Popover 

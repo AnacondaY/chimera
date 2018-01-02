@@ -1,4 +1,4 @@
-## 布局
+## Layout 布局
 常规布局的抽象组件。
 
 ### 组件列表
@@ -9,6 +9,7 @@
 * Content: 内容容器, 展示网页的主题内容。
 > 所有容器采用flex布局实现
 
+### 代码示例
 @@------------@@
 ### API
 >所有组件均支持利用```className```和```style```自定义样式
@@ -22,12 +23,4 @@ width | 侧边栏宽度 | ```Number``` | ```240```
 collapsedWidth | 折起时侧边栏宽度 | ```Number``` | ```0```
 threshold | 触发响应式的临界点, 规则同[BootStrap](https://getbootstrap.com/) | ```'xs'丨'sm'丨'md'丨'lg'``` | ```'sm'```
 
-#### Layout.collapse
-高阶函数, 返回一个高阶组件, 用于加强Layout对侧边栏的折叠功能。
->以下属性和方法均暴露在```Layout```的属性中, 可通过```this.props.cmrCollapse```访问
-
-属性 | 说明 | 类型 | 默认值
------|------| ---- | ---
-collapsed | 侧边栏折叠状态, 为```true```时折起 | ```Bolean``` | ```true```
-toggleSider | 折叠侧边栏的方法, 可挂载到```Layout```的任意子元素的```onClick```事件中 | ```function``` | -
 
