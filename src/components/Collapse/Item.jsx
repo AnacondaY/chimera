@@ -23,7 +23,7 @@ export default function Item({index, active, onClick, className, style, children
                 </span>
                 {header}
             </div>
-            <Animate active={active} effect="collapse">
+            <Animate active={active} initial={false} effect="collapse">
                 <div className="cmr-collapse-item-content">{children}</div>
             </Animate>
         </div>

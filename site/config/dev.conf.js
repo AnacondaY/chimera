@@ -2,6 +2,8 @@ const resolve = require('path').resolve;
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const baseConfig = require('./base.conf');
+
 module.exports = {
     entry: {
         app: [

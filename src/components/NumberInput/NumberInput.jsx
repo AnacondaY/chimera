@@ -39,10 +39,13 @@ export default class NumberInput extends BaseComponent {
 
     constructor(props: Object){
         super(props);
-        const { defaultValue, value, minimum } = props;
+        let { defaultValue, value, minimum, maximum } = props;
+        value = typeof value === 'undefined' ? (typeof defaultValue === 'undefined' ? minimum : defaultValue) : value;
+        value = Math.max(minimum, value);
+        value = Math.min(maximum, value);
         this.state = {
             //value: typeof props.initialValue === 'undefined' ? props.minimum : props.initialValue,
-            value: typeof value === 'undefined' ? (typeof defaultValue === 'undefined' ? minimum : defaultValue) : value
+            value
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
@@ -65,8 +68,7 @@ export default class NumberInput extends BaseComponent {
     change(delta: Number){
         if(this.props.disabled) return;
         this.setState(({value}) => {     
-            value = this.parse(value);
-            //value = Number(value);
+            value = parseFloat(this.parse(value));
             return {
                 value: value + delta
             };
@@ -119,12 +121,11 @@ export default class NumberInput extends BaseComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        const { value, onChange } = nextProps;
-        this.setState(({value}) => {
-            value = this.parse(value);
-            return {
-                value: this.validateValue(value)
-            };
+        let { value, onChange } = nextProps;
+        value = this.parse(value);
+        value = this.validateValue(value);
+        this.setState({
+            value
         });
     }
 
