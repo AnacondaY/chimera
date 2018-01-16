@@ -9,11 +9,9 @@ $feedback: #{$class-prefix}-form-feedback;
     %theme{
         border-color: $border-color;
         &:hover,
-        &:focused,
-        &-hovered,
-        &-focused{
-            border-color: $border-color;
-            box-shadow: 0 0 6px rgba($border-color, .35);
+        &:focused{
+            border-color: $border-color !important;
+            box-shadow: 0 0 6px rgba($border-color, .35) !important;
         }
     }
 
@@ -21,6 +19,14 @@ $feedback: #{$class-prefix}-form-feedback;
         &-textarea,
         &-origin{
             @extend %theme;
+        }
+        &-hovered,
+        &-focused{
+            .#{$input}-origin,
+            .#{$input}-textarea{
+                border-color: $border-color;
+                box-shadow: 0 0 6px rgba($border-color, .35);
+            }
         }
     }
 

@@ -6,7 +6,6 @@ import { transform } from 'babel-standalone';
 import { ulid } from 'ulid';
 import cx from 'classnames';
 import * as Components from 'components';
-
 export default class Block extends PureComponent {
 
     static propTypes = {

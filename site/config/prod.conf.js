@@ -1,7 +1,6 @@
 const resolve = require('path').resolve;
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -94,8 +93,5 @@ module.exports = {
             },
             sourceMap: false
         }),
-        new CleanWebpackPlugin(resolve(__dirname, 'dist'), {
-            root: SITE
-        })
     ],
 };

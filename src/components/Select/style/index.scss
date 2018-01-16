@@ -37,7 +37,6 @@ $sizes: 'large' 'middle' 'small';
     display: inline-block;
     vertical-align: middle;
     font-size: 14px;
-    
     @each $s in $sizes{
         $index: index($sizes, $s);
         $inner: #{$select}-value-inner;

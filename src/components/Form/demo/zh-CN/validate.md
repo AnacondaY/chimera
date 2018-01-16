@@ -17,15 +17,9 @@
     };
 
     class DemoForm extends React.Component {
-
         handleSubmit(){
             this.props.cmrForm.validateForm();
         }
-
-        handleReset(){
-            this.props.cmrForm.resetForm();
-        }
-
         render(){
             return (
                 <Form labelWidth={84} style={{width: 480}}>
@@ -63,7 +57,6 @@
                     </UploadField>
                     <Field>
                         <Button type="success" style={{marginRight: 12}} onClick={this.handleSubmit.bind(this)}>注册</Button>
-                        <Button type="error" onClick={this.handleReset.bind(this)}>重置</Button>
                     </Field>
                 </Form>
             )
