@@ -2,34 +2,6 @@ const resolve = require('path').resolve;
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const baseConfig = require('./base.conf');
-const { SRC, ROOT } = require('./config');
-
-// baseConfig.entry.app.unshift('webpack-hot-middleware/client');
-// const rules = [{
-//     test: /\.scss$/,
-//     use: ['style-loader', 'css-loader','sass-loader'],
-//     exclude: /node_modules/,
-// }, {
-//     test: /\.css$/,
-//     use: ['style-loader', 'css-loader'],
-//     include: /node_modules/
-// }].concat(baseConfig.module.rules);
-// module.exports = merge(baseConfig, {
-//     module: {
-//         rules
-//     },
-//     plugins: [
-//         new webpack.HotModuleReplacementPlugin(),
-//         new webpack.optimize.CommonsChunkPlugin({
-//             name: 'vendor'
-//         }),
-//         new HtmlWebpackPlugin({
-//             template:'../template.html'            
-//         })
-//     ],
-//     devtool: 'cheap-module-eval-source-map'
-// });
 
 module.exports = {
     entry: {

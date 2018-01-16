@@ -1,5 +1,4 @@
 ### Customized template of tooltip
-属性```tooltipTemplate```可为```Function```、```String```或```Boolean```, 当设置为```false```时将不显示tooltip。
 If attribute ```tooltipTemplate``` set to ```false```, the tooltip will not be rendered.Contrarily, default template will be used.
 ```javascript
     class Demo extends React.Component{

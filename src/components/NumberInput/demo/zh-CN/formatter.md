@@ -6,7 +6,6 @@
             return `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         }
         parse(value: Number): String{
-            console.log(value);
             return String(value).replace(/\$\s?|(,*)/g, '');
         }
         render(){
