@@ -2,7 +2,7 @@ import React,{ PureComponent } from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import PropTypes from 'prop-types';
 import marked from 'marked';
-import { transform } from 'babel-standalone';
+import Babel from 'babel-standalone';
 import { ulid } from 'ulid';
 import cx from 'classnames';
 import * as Components from 'components';
@@ -47,7 +47,7 @@ export default class Block extends PureComponent {
                 args.push(key);
                 params.push(Components[key]);
             }
-            const code = transform(`
+            const code = Babel.transform(`
                 ${codeSegment}\n
                 render(<Demo/>, document.getElementById('${this.uuid}'))
             `, {

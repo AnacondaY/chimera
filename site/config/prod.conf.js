@@ -62,6 +62,9 @@ module.exports = {
             loader: 'raw-loader'
         }]
     },
+    externals:{
+        'babel-standalone':'window.Babel'
+    },
     plugins: [
         new BundleAnalyzerPlugin(),
         new webpack.DefinePlugin({
