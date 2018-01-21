@@ -1,5 +1,0 @@
-.cmr-animation-collapse-active {
-  transition: .25s height, .25s opacity; }
-
-.cmr-animation-zoom-active, .cmr-animation-slide-active {
-  transition: .18s transform, .18s opacity; }

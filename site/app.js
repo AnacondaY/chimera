@@ -95,7 +95,6 @@ export default class App extends React.PureComponent{
             <div className="app">
                 <div className="app-header">
                     <div className="app-header-inner">
-                        <h1 className="app-header-logo"></h1>
                         <div className="app-header-search">
                             <Select filterable size="large" 
                                 placeholder={locale === 'zh-CN' ? '搜索组件' : 'Search Components ...'} 
@@ -111,6 +110,9 @@ export default class App extends React.PureComponent{
                             </Select>
                         </div>
                         <ul className="app-header-nav">
+                            <li className="app-header-nav-item github">
+                                <a href="https://github.com/AnacondaY/chimera"/>
+                            </li>
                             <li className="app-header-nav-item language">
                                 <span className={cx('language-item', {
                                     'active': locale === 'zh-CN'

@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# clear previous publishment
-rm -rf lib
-# set env
-cross-env NODE_ENV=production
-# compile js
-babel src/components --out-dir lib --copy-files --ignore demo
-# compile sass
-node scripts/styleGenerator.js
+#!/bin/bash
+rm -rf ./site/dist
+
+cd ./site/config
+
+webpack --config prod.conf.js --progress

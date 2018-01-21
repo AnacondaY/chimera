@@ -2,10 +2,10 @@ import React,{ PureComponent } from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import PropTypes from 'prop-types';
 import marked from 'marked';
-import Babel from 'babel-standalone';
 import { ulid } from 'ulid';
 import cx from 'classnames';
 import * as Components from 'components';
+
 export default class Block extends PureComponent {
 
     static propTypes = {
@@ -51,7 +51,8 @@ export default class Block extends PureComponent {
                 ${codeSegment}\n
                 render(<Demo/>, document.getElementById('${this.uuid}'))
             `, {
-                presets: ['es2015', 'react']
+                presets: ['es2015', 'react'],
+                plugins: ['transform-flow-strip-types']
             }).code;
             args.push(code);
             new Function(...args).apply(null, params);

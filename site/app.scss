@@ -33,6 +33,9 @@ $title: #d0d0d0;
             float: left;
             padding: 0;
             margin: 0;
+            height: 64px;
+            width: 64px;
+            background: url('./assets/logo.png') 100% 100% no-repeat;
         }
         &-search{
             float: left;
@@ -83,10 +86,24 @@ $title: #d0d0d0;
                     height: 100%;
                     color: #fff;
                 }
-                &:hover:not(.language){
-                    color: $active;
-                    border-color: $active;
+                &.github{
+                    position: relative;
+                    margin: 0 24px;
+                    a{
+                        height: 32px;
+                        width: 32px;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        top: 50%;
+                        left: 50%;
+                        background: url('./assets/github.png') no-repeat;
+                        background-size: contain;
+                    }
                 }
+                // &:hover:not(.language){
+                //     color: $active;
+                //     border-color: $active;
+                // }
                 &.active:not(.language){
                     color: $active;
                     border-bottom: 2px solid $active;

@@ -10,11 +10,11 @@ describe('=== Carousel ===', () => {
                 <Carousel.Item>2</Carousel.Item>
                 <Carousel.Item>3</Carousel.Item>
             </Carousel>
-        )
+        );
 
-        expect(carousel.find('.cmr-carousel-item').length).toBe(5);
-        expect(carousel.find('.cmr-carousel-indicator').length).toBe(3);
-        expect(carousel.find('.cmr-carousel-controller').length).toBe(1)
+        expect(carousel.find('.cmr-carousel-item')).toHaveLength(5);
+        expect(carousel.find('.cmr-carousel-indicator')).toHaveLength(3);
+        expect(carousel.find('.cmr-carousel-controller')).toHaveLength(1);
         carousel.unmount();
     });
 

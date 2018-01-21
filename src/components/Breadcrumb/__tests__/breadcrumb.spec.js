@@ -15,7 +15,7 @@ describe('=== Breadcrumb ===', () => {
         }];
         const breadcrumb = mount(<Breadcrumb routes={routes} />);
         const items = breadcrumb.find('.cmr-breadcrumb-item');
-        expect(items.length).toBe(3);
+        expect(items).toHaveLength(3);
         expect(items.at(0).childAt(0).prop('href')).toBe('/');
         expect(items.at(2).childAt(0).text()).toBe('active page');
     });
@@ -27,7 +27,7 @@ describe('=== Breadcrumb ===', () => {
                 <Breadcrumb.Item href="/page2">page2</Breadcrumb.Item>
                 <Breadcrumb.Item>active page</Breadcrumb.Item>
             </Breadcrumb>
-        )
+        );
         const items = breadcrumb.find('.cmr-breadcrumb-item');
         expect(items.length).toBe(3);
         expect(items.at(0).childAt(0).prop('href')).toBe('/');

@@ -1,12 +1,48 @@
 {
-    "presets":[
-        "env", 
-        "react"
-    ],
-    "plugins":[
-        "transform-runtime",
-        "transform-flow-strip-types",
-        "transform-object-rest-spread",
-        "transform-class-properties"
-    ]
+    "env":{
+        "development":{
+            "presets":[
+                "es2015", 
+                "react"
+            ],
+            "plugins":[
+                ["transform-runtime", {
+                    "polyfill": false
+                }],
+                "transform-object-rest-spread",
+                "transform-class-properties",
+                "transform-flow-strip-types"
+            ]
+        },
+        "test":{
+            "presets": [
+                "es2015",
+                "react"
+            ],
+            "plugins":[
+                "transform-runtime",
+                "transform-flow-strip-types",
+                "transform-object-rest-spread",
+                "transform-class-properties"
+            ]
+        },
+        "production":{
+            "presets" : [
+                ["es2015", { 
+                    "modules": false, 
+                    "loose": true 
+                    }
+                ], 
+                "react"
+            ],
+            "plugins":[
+                ["transform-runtime", {
+                    "polyfill": false
+                }],
+                "transform-flow-strip-types",
+                "transform-object-rest-spread",
+                "transform-class-properties"
+            ]
+        }   
+    }
 }

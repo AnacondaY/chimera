@@ -53,6 +53,9 @@ module.exports = {
             loader: 'raw-loader'
         }]
     },
+    externals:{
+        'babel-standalone': 'window.Babel'
+    },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
