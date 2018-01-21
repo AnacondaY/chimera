@@ -4,7 +4,7 @@ MESSAGE=$(cat package.json | grep version | head -1);
 
 rm -rf site/dist
 
-mkdir site site/dist
+mkdir site/dist
 cd site/dist
 
 git init

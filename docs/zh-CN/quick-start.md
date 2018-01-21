@@ -14,7 +14,7 @@ Chimera(/kaɪˈmɪrə/, 魔兽争霸中的双头飞龙), 是一套基于React实
 * 支持自定义主题
 * 组件及样式(css和sass)支持按需加载
 * Flow静态代码检测
-* webpack + babel + sass + postcss工作流
+* webpack + babel + sass工作流
 
 ## 使用
 

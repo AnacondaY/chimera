@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -rf site/dist
 yarn lint && yarn test
 
 if [ $? = 0 ]
@@ -11,7 +10,7 @@ if [ $? = 0 ]
         # compile js
         babel src/components --out-dir lib --copy-files --ignore demo
         # compile sass
-        node scripts/styleGenerator.js
+        node scripts/styleGenerator
 else
     echo 'Code encoutered certain error, check it'
 fi

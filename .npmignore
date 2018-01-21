@@ -1,5 +1,8 @@
 .vscode
 .idea
 scripts
+site
 webpack.config.js
+docs
 node_modules
+npm-debug.log

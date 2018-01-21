@@ -9,7 +9,7 @@
     "build": "./scripts/build.sh",
     "lint": "eslint src --quiet",
     "prepublish": "./scripts/prepublish.sh",
-    "publish": "./scripts/publish.sh"
+    "postpublish": "./scripts/pushSite.sh"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

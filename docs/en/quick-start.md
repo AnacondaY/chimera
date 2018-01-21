@@ -14,7 +14,7 @@ Chimera(/kaɪˈmɪrə/, A monster in Warcraft), which is a basic components libr
 * Customizable theme.
 * Component and style can load on demand
 * Static type checking by Flow
-* webpack + babel + sass + postcss workflow.
+* webpack + babel + sass workflow.
 
 ## Usage
 
