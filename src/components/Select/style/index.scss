@@ -194,6 +194,7 @@ $sizes: 'large' 'middle' 'small';
         box-shadow: 2px 2px 8px rgba($inverse, .25);
         border-radius: 4px;
         width: 100%;
+        overflow: hidden;
         &-wrapper{
             min-width: 100%;    
             top: 100%;    

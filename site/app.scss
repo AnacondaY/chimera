@@ -66,6 +66,9 @@ $title: #d0d0d0;
                         box-shadow: none;
                     }
                 }
+                &-menu{
+                    overflow-y: auto;
+                }
                 &-arrow{
                     display: none;
                 }
