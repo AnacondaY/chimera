@@ -12,6 +12,15 @@ body {
 
 .app {
   font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif; }
+  .app-notfound {
+    text-align: center;
+    color: #fff; }
+    .app-notfound-image {
+      width: 600px;
+      height: 280px;
+      margin: 24px auto 0;
+      background: url(5440a352a58c64947d513aa37353b5da.png) no-repeat;
+      background-size: contain; }
   .app-header {
     color: #fff;
     background: rgba(0, 0, 0, 0.48); }
@@ -3121,9 +3130,7 @@ body {
     margin-top: 4px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    overflow: hidden;
-    width: 100%;
-    overflow-y: auto; }
+    width: 100%; }
     .cmr-select-menu-wrapper {
       min-width: 100%;
       top: 100%;
@@ -4230,6 +4237,9 @@ body {
 .demo-field-extra {
   color: #fac525;
   font-weight: 500; }
+
+.cmr-form-field .cmr-select {
+  width: 100%; }
 .demo-grid .cmr-col {
   height: 72px;
   color: #fff;
