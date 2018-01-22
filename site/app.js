@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import cx from 'classnames';
 import { asideMap } from './siteMap';
 import { Row, Col, Select } from 'components';
+import NotFound from './NotFound';
 import './app.scss';
 
 const req = require.context('../src/components', true, /^\.\/[\w-]+\/style\/index.scss$/);
@@ -16,7 +17,7 @@ export default class App extends React.PureComponent{
         super(props);
         this.state = {
             locale: 'zh-CN',
-            hash: 'quick-start',
+            hash: '',
             searchContent: ''
         };
         this.handleSearch = this.handleSearch.bind(this);
@@ -26,6 +27,9 @@ export default class App extends React.PureComponent{
     renderPage(){
         let hash = window.location.hash.split('/');
         hash = hash.length > 1 ? hash[1] : hash[0];
+        if(!hash){
+            hash = 'quick-start';
+        }
         this.setState({
             hash
         });
@@ -34,7 +38,7 @@ export default class App extends React.PureComponent{
                 ReactDOM.render(<Page locale={this.state.locale}/>, document.getElementById('content'));
             })
             .catch(err => {
-                ReactDOM.render(<h1>404</h1>, document.getElementById('content'));
+                ReactDOM.render(<NotFound locale={this.state.locale}/>, document.getElementById('content'));
             });
     }
 

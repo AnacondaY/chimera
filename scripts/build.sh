@@ -1,8 +1,6 @@
 #!/bin/bash
+rm -rf dist
 
-#!/bin/bash
-rm -rf ./site/dist
-
-cd ./site/config
+cd site/config
 
 webpack --config prod.conf.js --progress

@@ -1,7 +1,9 @@
 .vscode
+.DS_Store
 .idea
 scripts
 site
+dist
 webpack.config.js
 docs
 node_modules

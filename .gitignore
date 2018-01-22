@@ -1,5 +1,6 @@
 .vscode
+.DS_Store
 lib
 node_modules
-site/dist
+dist
 npm-debug.log

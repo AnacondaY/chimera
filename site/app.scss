@@ -21,6 +21,17 @@ $title: #d0d0d0;
 
 .app{
     font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+    &-notfound{
+        text-align: center;
+        color: #fff;
+        &-image{
+            width: 600px;
+            height: 280px;
+            margin: 24px auto 0;
+            background: url('./assets/404.png') no-repeat;
+            background-size: contain;
+        }
+    }
     &-header{
         color: $default;
         background: rgba($inverse, .48);

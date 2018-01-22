@@ -21,7 +21,7 @@ module.exports = {
         ]
     },
     output: {
-        path: resolve(__dirname, '../dist'),
+        path: resolve(__dirname, '../../dist'),
         filename: '[name].[chunkhash:8].js',
         publicPath: ''
     },
@@ -59,16 +59,17 @@ module.exports = {
             loader:'file-loader'
         }, {
             test:/\.md$/,
-            loader: 'raw-loader'
+            loader: 'raw-loader',
+            include: /src|docs/
         }]
     },
     externals:{
         'babel-standalone':'window.Babel'
     },
     plugins: [
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'static'
-        }),
+        // new BundleAnalyzerPlugin({
+        //     analyzerMode: 'static'
+        // }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),

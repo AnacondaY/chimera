@@ -1,5 +1,5 @@
-### 远程搜索
-通过输入关键字从服务器搜索。
+### Remote
+Search from remote server.
 ```javascript
     const provinces = [
         {id:1, name: '新疆'}, 

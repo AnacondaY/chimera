@@ -2,10 +2,10 @@
 ORIGIN=$(git remote -v | awk '$1=="origin" && $3=="(push)" {print $2}');
 MESSAGE=$(cat package.json | grep version | head -1);
 
-rm -rf site/dist
+rm -rf dist
 
-mkdir site/dist
-cd site/dist
+mkdir dist
+cd dist
 
 git init
 git remote add origin $ORIGIN

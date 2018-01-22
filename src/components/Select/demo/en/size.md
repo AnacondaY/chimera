@@ -1,5 +1,5 @@
 ### Size
-设置```size```属性可以控制选择器的大小。
+Different size of select.
 ```javascript
     class Demo extends React.Component {
         render(){
