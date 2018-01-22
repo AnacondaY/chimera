@@ -1,5 +1,6 @@
 # chimera-ui
-[中文说明](/README_zh-CN.md)
+[chimera-ui](https://anaconday.github.io/chimera/) is a library based on React framework that provides several basic components.
+[中文 README](/README_zh-CN.md)
 ## Install
 ```bash
 npm install chimera-ui --save
