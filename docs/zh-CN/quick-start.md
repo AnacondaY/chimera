@@ -44,12 +44,12 @@ Chimera提供已经构建完成的脚本、样式及对应的压缩版本, 可�
 
 * 手工载入
 
-```javascript
-    import Button from 'chimera-ui/lib/button';
+```js
+    import Button from 'chimera-ui/lib/components/Button';
     //引入scss文件
-    import Button from 'chimera-ui/lib/button/style'
+    import Button from 'chimera-ui/lib/components/Button/style/index.scss'
     //或者引入css文件
-    import Button from 'chimera-ui/lib/button/style/css';
+    import Button from 'chimera-ui/lib/components/Button/style/css/index.css';
 ```
 
 * [babel-plugin-chimeraui](https://github.com/AnacondaY/babel-plugin-chimeraui)(**推荐**)
@@ -69,9 +69,9 @@ Chimera提供已经构建完成的脚本、样式及对应的压缩版本, 可�
 
 配置完成之后可使用```import { Button } from 'chimera-ui'```的方式导入, 这时```babel```转译后已经实现按需加载从而减少冗余代码。
 
-```javascript
+```js
     import { Button } from 'chimera-ui';
     //经过babel转译后
-    import Button from 'chimera-ui/lib/button';
-    import Button from 'chimera-ui/lib/button/style/index.scss'
+    import Button from 'chimera-ui/lib/components/Button';
+    import Button from 'chimera-ui/lib/components/Button/style/index.scss'
 ```

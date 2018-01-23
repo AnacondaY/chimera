@@ -44,11 +44,11 @@ The above ways will load all components at once, which is inefficient network tr
 * Manual loads
 
 ```javascript
-    import Button from 'chimera-ui/lib/button';
+    import Button from 'chimera-ui/lib/components/Button';
     //load scss
-    import Button from 'chimera-ui/lib/button/style'
-    //or load css
-    import Button from 'chimera-ui/lib/button/style/css';
+    import Button from 'chimera-ui/lib/components/Button/style/index.scss'
+    //load css
+    import Button from 'chimera-ui/lib/components/Button/style/css/index.css';
 ```
 
 * [babel-plugin-chimeraui](https://github.com/AnacondaY/babel-plugin-chimeraui)(**Recommended**)
@@ -71,6 +71,6 @@ After babel configuration, the syntax ```import { Button } from 'chimera-ui'``` 
 ```javascript
     import { Button } from 'chimera-ui';
     //after babel transformation
-    import Button from 'chimera-ui/lib/button';
-    import Button from 'chimera-ui/lib/button/style/index.scss'
+    import Button from 'chimera-ui/lib/components/Button';
+    import Button from 'chimera-ui/lib/components/Button/style/index.scss'
 ```
