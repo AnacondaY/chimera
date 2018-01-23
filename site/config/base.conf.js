@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const resolve = require('path').resolve;
-const { SITE, NODE_MODULES, SRC } = require('./config');
 
 module.exports = {
     entry:{

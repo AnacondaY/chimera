@@ -8,6 +8,7 @@
     "test": "jest",
     "build": "./scripts/build.sh",
     "lint": "eslint src --quiet",
+    "flow": "flow check",
     "prepublish": "./scripts/prepublish.sh",
     "postpublish": "./scripts/pushSite.sh"
   },

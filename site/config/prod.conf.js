@@ -6,7 +6,6 @@ const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const HappyPack = require('happypack');
-const { SITE } = require('./config');
 
 module.exports = {
     entry: {
