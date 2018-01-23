@@ -1,5 +1,8 @@
 # chimera-ui
+[![Build Status](https://www.travis-ci.org/AnacondaY/chimera.svg?branch=master)](https://www.travis-ci.org/AnacondaY/chimera)
+
 [chimera-ui](https://anaconday.github.io/chimera/) is a library based on React framework that provides several basic components.
+
 [中文 README](/README_zh-CN.md)
 ## Install
 ```bash
