@@ -52,7 +52,7 @@ Chimera提供已经构建完成的脚本、样式及对应的压缩版本, 可�
     import Button from 'chimera-ui/lib/button/style/css';
 ```
 
-* [babel-plugin-chimeraui]()(**推荐**)
+* [babel-plugin-chimeraui](https://github.com/AnacondaY/babel-plugin-chimeraui)(**推荐**)
 
 在```.babelrc```中配置:
 ```json

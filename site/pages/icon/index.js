@@ -10,7 +10,7 @@ export default class DemoIcon extends React.PureComponent {
     render(){
         return (
             <div className="demo-icon-list">
-                <Statement componentName="Icon">
+                <Statement locale={this.props.locale} componentName="Icon">
                     <Row className="demo-icon">
                         <Col xs={12} sm={8} md={6} lg={4}>
                             <div className="demo-icon-container">
@@ -276,6 +276,38 @@ export default class DemoIcon extends React.PureComponent {
                                     <Icon type="double-arrow-right"/>
                                 </div>
                                 <div className="demo-icon-text">double-arrow-right</div>
+                            </div>
+                        </Col>
+                        <Col xs={12} sm={8} md={6} lg={4}>
+                            <div className="demo-icon-container">
+                                <div className="demo-icon-wrapper">
+                                    <Icon type="upload"/>
+                                </div>
+                                <div className="demo-icon-text">upload</div>
+                            </div>
+                        </Col>
+                        <Col xs={12} sm={8} md={6} lg={4}>
+                            <div className="demo-icon-container">
+                                <div className="demo-icon-wrapper">
+                                    <Icon type="download"/>
+                                </div>
+                                <div className="demo-icon-text">download</div>
+                            </div>
+                        </Col>
+                        <Col xs={12} sm={8} md={6} lg={4}>
+                            <div className="demo-icon-container">
+                                <div className="demo-icon-wrapper">
+                                    <Icon type="document"/>
+                                </div>
+                                <div className="demo-icon-text">document</div>
+                            </div>
+                        </Col>
+                        <Col xs={12} sm={8} md={6} lg={4}>
+                            <div className="demo-icon-container">
+                                <div className="demo-icon-wrapper">
+                                    <Icon type="math"/>
+                                </div>
+                                <div className="demo-icon-text">math</div>
                             </div>
                         </Col>
                     </Row>

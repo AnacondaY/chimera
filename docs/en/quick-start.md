@@ -51,7 +51,7 @@ The above ways will load all components at once, which is inefficient network tr
     import Button from 'chimera-ui/lib/button/style/css';
 ```
 
-* [babel-plugin-chimeraui]()(**Recommended**)
+* [babel-plugin-chimeraui](https://github.com/AnacondaY/babel-plugin-chimeraui)(**Recommended**)
 
 In your ```.babelrc``` file:
 ```json
