@@ -49,6 +49,8 @@ body {
           .app-header-search .cmr-select-box:hover, .app-header-search .cmr-select-box:focus {
             border-color: transparent;
             box-shadow: none; }
+        .app-header-search .cmr-select-menu {
+          overflow-y: auto; }
         .app-header-search .cmr-select-arrow {
           display: none; }
         .app-header-search .cmr-select-open .cmr-select-box {
@@ -77,7 +79,6 @@ body {
           margin: 0 24px; }
           .app-header-nav-item.github a {
             height: 32px;
-            width: 32px;
             position: absolute;
             transform: translate(-50%, -50%);
             top: 50%;
@@ -3130,7 +3131,8 @@ body {
     margin-top: 4px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
     .cmr-select-menu-wrapper {
       min-width: 100%;
       top: 100%;
