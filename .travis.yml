@@ -12,5 +12,4 @@ install:
 
 script:
   - yarn lint
-  - yarn flow
   - yarn test
