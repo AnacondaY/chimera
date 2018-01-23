@@ -1,6 +1,6 @@
-import Form from './Form.jsx';
+import Form from './Form';
 import { Schema } from 'validate-promisify';
-import Field from './Field.jsx';
+import Field from './Field';
 import enhanceForm from './hoc/formEnhancer';
 import enhanceField from './hoc/fieldEnhancer';
 import enhanceControl from './hoc/enhanceControl';

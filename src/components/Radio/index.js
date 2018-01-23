@@ -1,6 +1,6 @@
-import Radio from './Radio.jsx';
-import Group from './Group.jsx';
-import Button from './Button.jsx';
+import Radio from './Radio';
+import Group from './Group';
+import Button from './Button';
 
 Radio.Group = Group;
 Radio.Button = Button;

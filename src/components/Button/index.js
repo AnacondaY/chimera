@@ -1,5 +1,5 @@
-import Button from './Button.jsx';
-import Group from './Group.jsx';
+import Button from './Button';
+import Group from './Group';
 
 Button.Group = Group;
 

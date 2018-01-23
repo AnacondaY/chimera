@@ -1,5 +1,5 @@
-import Tabs from './Tabs.jsx';
-import Pane from './Pane.jsx';
+import Tabs from './Tabs';
+import Pane from './Pane';
 
 Tabs.Pane = Pane;
 

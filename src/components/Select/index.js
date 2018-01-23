@@ -1,6 +1,6 @@
-import Select from './Select.jsx';
-import Option from './Option.jsx';
-import OptGroup from './OptGroup.jsx';
+import Select from './Select';
+import Option from './Option';
+import OptGroup from './OptGroup';
 
 Select.Option = Option;
 Select.OptGroup = OptGroup;

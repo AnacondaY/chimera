@@ -1,4 +1,4 @@
-import Datepicker from './Datepicker.jsx';
+import Datepicker from './Datepicker';
 import locale from '../i18n/lang/zh-CN';
 import { inject } from '../i18n';
 import zhCN from '../i18n/lang/zh-CN';

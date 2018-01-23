@@ -8,7 +8,7 @@ if [ $? = 0 ]
         # set env
         cross-env NODE_ENV=production
         # compile js
-        babel src/components --out-dir lib --copy-files --ignore demo
+        babel src --out-dir lib --copy-files --ignore demo
         # compile sass
         node scripts/styleGenerator
 else

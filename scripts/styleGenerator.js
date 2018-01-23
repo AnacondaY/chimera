@@ -13,6 +13,6 @@ gulp
     .pipe(rename(function(path){
         path.dirname += '/css';
     }))
-    .pipe(gulp.dest('./lib', {
+    .pipe(gulp.dest('./lib/components', {
         cwd: process.cwd()
     }));

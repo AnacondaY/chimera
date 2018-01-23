@@ -5,7 +5,7 @@ import PropTypes from '../../base/prop-types';
 import TableHeader from './parts/TableHeader';
 import TableBody from './parts/TableBody';
 import BasicTable from './parts/BasicTable';
-import Hub from './Hub.jsx';
+import Hub from './Hub';
 import Display from './Display';
 import { contextTypes } from './define';
 

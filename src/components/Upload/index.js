@@ -1,2 +1,2 @@
-import Uploader from './Uploader.jsx';
+import Uploader from './Uploader';
 export default Uploader;
